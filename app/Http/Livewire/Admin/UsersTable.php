@@ -16,7 +16,7 @@ class UsersTable extends Component
 
     public $confirmed = 0;
 
-    public $perPage = 2;
+    public $perPage = 5;
 
     public $confirmingUsuarioDeletion = false;
     public $confirmingUsuarioAdd = false;
@@ -42,7 +42,7 @@ class UsersTable extends Component
 
     public function loadMore()
     {
-        $this->perPage += 2;
+        $this->perPage += 5;
     }
 
     public function updatingActive()
