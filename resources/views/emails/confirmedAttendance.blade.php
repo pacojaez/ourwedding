@@ -681,7 +681,20 @@
                                                                                                     <div>
                                                                                                         <h1 class="default-heading1"
                                                                                                             style="color: #1F2D3D; font-family: arial,helvetica,sans-serif; font-size: 36px; margin: 0px;">
-                                                                                                            {{ ucfirst($user->name) }}, ¡¡¡¡¡MUCHAS GRACIAS POR VENIR!!!!!!!!!
+                                                                                                            {{ ucfirst($user->name) }}
+                                                                                                        </h1>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td align="center"
+                                                                                                    valign="top"
+                                                                                                    class="r20-i nl2go-default-textstyle"
+                                                                                                    style="color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; line-height: 1.5; text-align: center;">
+                                                                                                    <div>
+                                                                                                        <h1 class="default-heading1"
+                                                                                                            style="color: #1F2D3D; font-family: arial,helvetica,sans-serif; font-size: 36px; margin: 0px;">
+                                                                                                           ¡¡¡¡¡MUCHAS GRACIAS POR VENIR!!!!!!!!!
                                                                                                         </h1>
                                                                                                     </div>
                                                                                                 </td>

@@ -12,7 +12,7 @@ class UsersTable extends Component
 
     protected $users;
 
-    protected $user;
+    public $user;
 
     public $confirmed = 0;
 
@@ -73,6 +73,8 @@ class UsersTable extends Component
         $user->delete();
         $this->confirmingUsuarioDeletion = false;
         session()->flash('message', 'Invitado borrado correctamente');
+
+        return redirect()->to('usuarios');
     }
 
     public function confirmUsuarioAdd()
@@ -112,6 +114,8 @@ class UsersTable extends Component
         }
 
         $this->confirmingUsuarioAdd = false;
+
+        return redirect()->to('usuarios');
 
     }
 }

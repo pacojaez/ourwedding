@@ -22,10 +22,9 @@
 
   @push('scripts')
   <script>
-
-    let tables = document.getElementsByTagName("table");
-      for (var i = 0; i < tables.length; i++) {
-        resizableGrid(tables[i]);
+    let tablesSongs = document.getElementsByTagName("table");
+      for (var i = 0; i < tablesSongs.length; i++) {
+        resizableGrid(tablesSongs[i]);
       }
       function resizableGrid(table) {
         var row = table.getElementsByTagName("tr")[0],

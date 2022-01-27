@@ -55,9 +55,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::middleware(['isAdmin'])->group(function(){
-    Route::get('/pruebaadmin', function(){
-        return view('pruebaadmin');
-    });
+
+    Route::get('/admin', function(){
+        return view('admin');
+    })->name('admin');
 
     Route::get('/usuarios', function(){
         return view('usuarios');
@@ -66,4 +67,5 @@ Route::middleware(['isAdmin'])->group(function(){
     Route::get('/presupuesto', function(){
         return view('presupuesto');
     })->name('presupuesto');
+
 });

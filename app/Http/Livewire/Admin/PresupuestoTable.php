@@ -27,8 +27,16 @@ class PresupuestoTable extends Component
         'presupuesto.pagado' => 'nullable'
     ];
 
+    // protected $listeners = ['presupuestoModified' => 'render'];
+
+    // protected $listeners = ['confirmed' => '$refresh'];
+
     public function mount(){
 
+    }
+
+    public function render()
+    {
         $this->presupuestos = Presupuesto::all();
 
         foreach( $this->presupuestos as $presupuesto){
@@ -36,11 +44,6 @@ class PresupuestoTable extends Component
         }
 
         $this->saldo = $this->presupuesto_maximo - $this->presupuesto_actual;
-
-    }
-
-    public function render()
-    {
         // dd($this->presupuesto_actual);
         return view('livewire.admin.presupuesto-table', [
             'presupuestos' => $this->presupuestos,
@@ -81,8 +84,8 @@ class PresupuestoTable extends Component
         $this->confirmingPresupuestoDeletion = false;
         session()->flash('message', 'Linea de Presupuesto borrada correctamente');
         $this->presupuesto_actual = 0;
-        $this->mount();
-        $this->render();
+        // $this->emitSelf('confirmed');
+        return redirect()->to('presupuesto');
     }
 
     public function confirmPresupuestoAdd()
@@ -124,7 +127,10 @@ class PresupuestoTable extends Component
 
         $this->confirmingPresupuestoAdd = false;
         $this->presupuesto_actual = 0;
-        $this->mount();
+        // $this->emitSelf('presupuestoModified');
+        // $this->emitSelf('confirmed');
+        $this->emitSelf('saved');
+        return redirect()->to('presupuesto');
 
     }
 
