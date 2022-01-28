@@ -1,4 +1,4 @@
-<div class="mb-10">
+<div class="mb-10 pb-10">
     <h2>HAY {{ $count }} fotos de momento</h2>
     <div class="px-2 mx-auto my-10">
         <div class="flex flex-row flex-wrap justify-center">
@@ -15,7 +15,7 @@
         </div>
         <div class="mt-2">
             @if ($loadAmount >= $count)
-                <p class="bg-red-500 my-10 text-2xl font-bold text-center text-gray-800">No Quedan Más Fotos Por Cargar!</p>
+                <p class="bg-red-500 p-2 m-2 text-2xl rounded-xl font-bold text-center text-gray-800">Estas son todas las fotos que tenemos de momento!</p>
             @else
                 <button wire:click.prevent="loadMore" class="bg-green-500 border-2 rounded-xl p-2 m-2 text-gray-300">Load more</button>
             @endif
