@@ -93,14 +93,12 @@
     @livewire('cuenta-atras')
 
     <div class="flex flex-row items-center justify-center w-full">
-
         <!--Container for content-->
         <div class="container h-full mt-32 bg-green-300">
             <div class="flex flex-row items-center justify-center h-screen overflow-hidden" style="background: #0f4479;">
                 <main class="absolute w-full h-full bg-white font-abhaya-libre">
                      <div class="container relative z-10 flex flex-col items-center justify-center px-6 mx-auto sm:px-12 sm:flex-row">
-
-                        <div class="grid items-center grid-rows-1 gap-4 lg:grid-cols-2 justify-items-center">
+                        <div class="grid items-center grid-rows-1 gap-2 lg:grid-cols-2 justify-items-center">
                             <div class="w-full ml-2 svgcontainer">
                                 {{ $slot }}
                             </div>

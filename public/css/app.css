@@ -1494,6 +1494,9 @@ select {
 .max-w-full {
 	max-width: 100%;
 }
+.max-w-sm {
+	max-width: 24rem;
+}
 .max-w-6xl {
 	max-width: 72rem;
 }
@@ -2241,6 +2244,10 @@ select {
 	--tw-text-opacity: 1;
 	color: rgba(6, 78, 59, var(--tw-text-opacity));
 }
+.text-black {
+	--tw-text-opacity: 1;
+	color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
 .text-purple-900 {
 	--tw-text-opacity: 1;
 	color: rgba(76, 29, 149, var(--tw-text-opacity));
@@ -2847,6 +2854,11 @@ select {
 	.sm\:px-4 {
 		padding-left: 1rem;
 		padding-right: 1rem;
+	}
+
+	.sm\:py-12 {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
 	}
 
 	.sm\:pt-0 {

@@ -10,8 +10,8 @@ use Livewire\Component;
 class CancionsForm extends Component
 {
     public $loading = false;
-    public $showAlertMessage = false;
-    public $showSuccessMessage = false;
+    // public $showAlertMessage = false;
+    // public $showSuccessMessage = false;
 
     public $title;
     public $author;
@@ -38,11 +38,13 @@ class CancionsForm extends Component
 
         $cancion = $cancion->save();
 
-        $this->emitTo('all-cancions', 'addedSong');
+        // $this->emitTo('all-cancions', 'addedSong');
         $this->title = '';
         $this->author = '';
 
-        return redirect()->back();
+        session()->flash('message', 'Canción añadida correctamente.....¡¡ANOTHER ONE, PLEASE!!!!');
+
+        return redirect()->to('/cancions');
     }
 
     // protected $rules = [
@@ -68,23 +70,4 @@ class CancionsForm extends Component
         ]);
     }
 
-    // public function saveCancion( Request $request ){
-    //     dd($_POST);
-    //     $this->validate();
-
-    //     $cancion = new Cancion();
-    //     $cancion->title = $request->input('title');
-    //     $cancion->author = $request->input('author');
-    //     $cancion->user_id = Auth::user()->id;
-
-    //     dd($cancion);
-
-    //     $cancion->save();
-    //     $this->loading = false;
-    //     $this->showAlertMessage = false;
-    //     $this->showSuccessMessage = true;
-
-    //     return redirect('/');
-
-    // }
 }

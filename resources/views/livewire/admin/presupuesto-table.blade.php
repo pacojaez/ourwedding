@@ -3,8 +3,10 @@
         <div class="relative flex items-center px-4 py-3 text-sm font-bold text-white bg-blue-500" role="alert"
                 x-data="{ show: true }"
                 x-show="show"
-                x-init="show = setTimeout(() => { show = false }, 2000); })"
                 x-show.transition.opacity.out.duration.1500ms="show"
+                x-init="setTimeout(function(){
+                    show= false
+                }, 3000)"
                 >
             <svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <path
