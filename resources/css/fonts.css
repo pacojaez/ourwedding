@@ -1,0 +1,30 @@
+/* @font-face {
+    font-family: dancing;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/DancingScript-Bold.ttf');
+    src: url('../fonts/DancingScript-Medium.ttf');
+    src: url('../fonts/DancingScript-Regular.ttf');
+    src: url('../fonts/DancingScript-SemiBold.ttf');
+} */
+
+@font-face {
+    font-family: dancing;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/DancingScript-Regular.ttf');
+}
+
+@font-face {
+    font-family: dancing;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/DancingScript-Bold.ttf');
+}
+
+@font-face {
+    font-family: dancing;
+    font-style: normal;
+    font-weight: medium;
+    src: url('../fonts/DancingScript-Medium.ttf');
+}
