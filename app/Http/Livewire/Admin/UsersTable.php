@@ -96,7 +96,7 @@ class UsersTable extends Component
 
         if( isset( $this->user->id)) {
             $this->user->save();
-            session()->flash('message', 'Usuario Saved Successfully');
+            session()->flash('message', 'Invitado Saved Successfully');
         } else {
             $user = new User();
             $user->name = $this->user['name'];

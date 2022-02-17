@@ -4,7 +4,10 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use App\Models\Presupuesto;
+use App\Models\PresupuestoMaximo;
 use Illuminate\Database\Eloquent\Collection;
+use App\Services\GetPresupuestoService;
+use Database\Seeders\PresupuestoMaximoSeeder;
 
 class PresupuestoTable extends Component
 {
@@ -12,12 +15,12 @@ class PresupuestoTable extends Component
 
     public $presupuesto;
 
-    public int $presupuesto_maximo = 6000;
-    public int $presupuesto_actual = 0;
-    public int $saldo = 0;
+    // public $presupuestoMaxActual;
+    public int $presupuestoMaxNuevo = 0;
 
     public bool $confirmingPresupuestoDeletion = false;
     public bool $confirmingPresupuestoAdd = false;
+    public bool $confirmingPresupuestoMax = false;
 
     protected $rules = [
         'presupuesto.concepto' => 'required|string|min:4',
@@ -27,9 +30,6 @@ class PresupuestoTable extends Component
         'presupuesto.pagado' => 'nullable'
     ];
 
-    // protected $listeners = ['presupuestoModified' => 'render'];
-
-    // protected $listeners = ['confirmed' => '$refresh'];
 
     public function mount(){
 
@@ -39,18 +39,36 @@ class PresupuestoTable extends Component
     {
         $this->presupuestos = Presupuesto::all();
 
-        foreach( $this->presupuestos as $presupuesto){
-            $this->presupuesto_actual += $presupuesto->coste;
-        }
+        $presupuestoMaxActual = new GetPresupuestoService();
 
-        $this->saldo = $this->presupuesto_maximo - $this->presupuesto_actual;
-        // dd($this->presupuesto_actual);
+        $presupuestoMaximo = $presupuestoMaxActual->getMax()->total;
+
+        // logic moved to GetPresupuestoService
+        // foreach( $this->presupuestos as $presupuesto){
+        //     $this->presupuesto_actual += $presupuesto->coste;
+        // }
+
+        // $this->saldo = $this->presupuesto_maximo - $this->presupuesto_actual;
+
         return view('livewire.admin.presupuesto-table', [
             'presupuestos' => $this->presupuestos,
-            'presupuesto_máximo' => $this->presupuesto_maximo,
-            'presupuesto_actual' => $this->presupuesto_actual,
-            'saldo' => $this->saldo
+            'presupuestoMaximo' => $presupuestoMaximo,
+            // 'presupuesto_actual' => $this->presupuesto_actual,
+            // 'saldo' => $this->saldo
         ]);
+    }
+
+    public function presupuestoMaxModified( )
+    {
+        $newPresupuestoMax = new PresupuestoMaximo();
+
+        $newPresupuestoMax->total = $this->presupuestoMaxNuevo;
+        $newPresupuestoMax->save();
+
+        session()->flash('message', 'HAS MODIFICADO CORRECTAMENTE EL PRESUPUESTO MÁXIMO.......O NO ;-))');
+
+        return redirect()->to('presupuesto');
+
     }
 
     public function updatingActive()
@@ -100,6 +118,15 @@ class PresupuestoTable extends Component
         $this->presupuesto = $presupuesto;
         $this->confirmingPresupuestoAdd = true;
     }
+
+    public function confirmPresupuestoMax( GetPresupuestoService $getPresupuesto)
+    {
+        $this->reset(['presupuesto']);
+        $this->confirmingPresupuestoMax = true;
+
+        $this->presupuestoMaxActual =  $getPresupuesto->getMax();
+    }
+
 
     public function savePresupuesto()
     {

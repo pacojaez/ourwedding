@@ -97,7 +97,9 @@
         </div>
         @else
         <div class="flex flex-row justify-center my-4">
-            <x-jet-button class="my-10 text-2xl font-bold text-center text-gray-300">No hay más usuarios!</x-jet-button>
+            <x-jet-button class="my-10 text-2xl font-bold text-center text-gray-300">
+                No hay más invitados!
+            </x-jet-button>
         </div>
         @endif
 

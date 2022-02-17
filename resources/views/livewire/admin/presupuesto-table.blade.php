@@ -23,48 +23,25 @@
             </span>
         </div>
     @endif
+
     <div class="flex flex-col w-full min-h-screen bg-white">
         <div class="col-span-12">
             <div class="overflow-auto lg:overflow-visible">
-                <div class="flex flex-col pb-1 border-b-2 md:flex-row lg:justify-between border-fuchsia-900">
-                    <h2 class="text-xl font-bold text-gray-700">PRESUPUESTO MÁXIMO: {{ $presupuesto_maximo }} €</h2>
-                    <h2 class="text-xl font-bold text-gray-700">Actualmente el presupuesto es: {{ $presupuesto_actual }} €</h2>
-                    <h2 class="text-xl font-bold text-gray-700">
-                        Lo que arroja un saldo de
-                        @if ($saldo > 0 )
-                            <span class="text-green-600"> {{ $saldo }} €</span>
-                        @else
-                            <span class="text-red-600"> {{ $saldo }} €</span>
-                        @endif
-                    </h2>
+
+                @livewire('presupuesto-total')
+
+                <div class="flex flex-col pb-1 border-b-2 md:flex-row lg:justify-center border-fuchsia-900">
+
                     <div class="flex justify-between mt-8 text-2xl">
                         <div class="mr-2">
                             <x-jet-button wire:click="confirmPresupuestoAdd" class="bg-blue-500 hover:bg-blue-700">
                                 Añadir nueva linea de Presupuesto
                             </x-jet-button>
+                            <x-jet-button wire:click="confirmPresupuestoMax" class="bg-blue-500 hover:bg-blue-700">
+                                Modificar Presupuesto máximo
+                            </x-jet-button>
                         </div>
                     </div>
-                    {{-- <div class="flex-auto text-center">
-                        <input type="text" name="name" placeholder="Search..."
-                            class="w-1/3 py-2 border-b-2 border-blue-600 outline-none focus:border-yellow-400" />
-                    </div> --}}
-
-                    {{-- <div>
-                        <a href="#">
-                            <button class="px-3 py-1 text-white bg-blue-500 rounded-full hover:bg-blue-700 sm">
-                                All
-                            </button>
-                        </a>
-                        <a href="#">
-                            <button class="px-3 py-1 text-white bg-blue-500 rounded-full hover:bg-blue-700 sm">
-                                Admin
-                            </button>
-                        </a>
-                        <a href="#">
-                            <button class="px-3 py-1 text-white bg-blue-500 rounded-full hover:bg-blue-700 sm">
-                                User
-                            </button></a>
-                    </div> --}}
                 </div>
                 <div class="flex flex-row justify-start mt-6 lg:justify-center">
                     <table class="table space-y-6 overflow-scroll text-sm text-gray-600 border-separate">
@@ -85,11 +62,11 @@
                                 <td class="p-3">{{ $presupuesto->contacto }}</td>
                                 <td class="p-3">{{ $presupuesto->observaciones }}</td>
                                 <td class="p-3">{{ $presupuesto->coste }}</td>
-                                <td class="p-3">
+                                <td class="p-3 text-center">
                                     @if ($presupuesto->pagado)
-                                    <span class="px-2 bg-green-400 rounded-md text-gray-50">PAGADO</span>
+                                    <span class="px-2 bg-green-400 rounded-md text-gray-50 text-xs">PAGADO</span>
                                     @else
-                                    <span class="px-2 bg-red-400 rounded-md text-gray-50">NO PAGADO</span>
+                                    <span class="px-2 bg-red-400 rounded-md text-gray-50 text-xs">NO PAGADO</span>
                                     @endif
                                 </td>
                                 <td class="p-3">
@@ -184,5 +161,34 @@
                 </x-jet-danger-button>
             </x-slot>
         </x-jet-dialog-modal>
+
+        <x-jet-dialog-modal wire:model="confirmingPresupuestoMax" class="z-30">
+            <x-slot name="title">
+                {{  'Modificar Presupuesto Máximo' }}
+            </x-slot>
+
+            <x-slot name="content">
+                <div class="col-span-6 sm:col-span-4">
+                    <x-jet-label for="presupuestoMax" value="{{ __('Presupuesto Máximo Actual') }}" />
+                    {{-- <x-jet-input id="presupuesto.concepto" type="text" class="block w-full mt-1" wire:model.defer="presupuesto.concepto" /> --}}
+                    {{ $presupuestoMaximo }} €
+                    {{-- <x-jet-input-error for="presupuesto.concepto" class="mt-2" /> --}}
+                </div>
+
+                <div class="col-span-6 mt-4 sm:col-span-4">
+                    <x-jet-label for="presupuestoMaxNuevo" value="{{ __('Nuevo Máximo') }}" />
+                    <x-jet-input id="presupuestoMaxNuevo" type="number" class="block w-full mt-1" wire:model.defer="presupuestoMaxNuevo" />
+                    <x-jet-input-error for="presupuestoMaxNuevo" class="mt-2" />
+                </div>
+            </x-slot>
+
+            <x-slot name="footer">
+                <x-jet-danger-button class="ml-2" wire:click="presupuestoMaxModified({{ $presupuestoMaxNuevo }})" wire:loading.attr="disabled">
+                    {{ __('Save') }}
+                </x-jet-danger-button>
+            </x-slot>
+        </x-jet-dialog-modal>
     </div>
+
+    @include('components.presupuestoChart')
 </div>
