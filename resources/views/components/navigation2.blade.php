@@ -39,35 +39,35 @@
                                     </svg> --}}
                                 </button>
                             </x-slot>
-                            <x-slot name="content">
+                            <x-slot name="content" class="text-xs">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                                 <a href="{{ route('dashboard')}}"
-                                    class="block px-3 py-2 my-2 text-base font-medium text-green-200 bg-gray-600 rounded-md hover:bg-gray-900">
+                                    class="block px-3 py-2 my-2 text-xs text-green-200 bg-gray-600 rounded-md hover:bg-gray-900">
                                     CONFIRMAR ASISTENCIA
                                 </a>
                                 <a href="{{ route('mapa')}}"
-                                    class="block px-3 py-2 my-2 text-base font-medium text-green-200 bg-gray-600 rounded-md hover:underline">
+                                    class="block px-3 py-2 my-2 text-xs text-green-200 bg-gray-600 rounded-md hover:underline">
                                     MAPA
                                 </a>
                                 <a href="{{ route('elmenu')}}"
-                                    class="block px-3 py-2 my-2 text-base font-medium text-green-200 bg-gray-600 rounded-md hover:bg-gray-900">
+                                    class="block px-3 py-2 my-2 text-xs text-green-200 bg-gray-600 rounded-md hover:bg-gray-900">
                                     EL MENÚ
                                 </a>
                                 <a href="{{ route('cancions')}}"
-                                    class="block px-3 py-2 my-2 text-base font-medium text-green-200 bg-gray-600 rounded-md hover:bg-gray-900">
+                                    class="block px-3 py-2 my-2 text-xs text-green-200 bg-gray-600 rounded-md hover:bg-gray-900">
                                     CANCIONES
                                 </a>
                                 <a href="{{ route('galeria')}}"
-                                    class="block px-3 py-2 my-2 text-base font-medium text-green-200 bg-gray-600 rounded-md hover:bg-gray-900">
+                                    class="block px-3 py-2 my-2 text-xs text-green-200 bg-gray-600 rounded-md hover:bg-gray-900">
                                     GALERÍA
                                 </a>
                                 <a href="{{ route('elplan')}}"
-                                    class="block px-3 py-2 my-2 text-base font-medium text-green-200 bg-gray-600 rounded-md hover:bg-gray-900">
+                                    class="block px-3 py-2 my-2 text-xs text-green-200 bg-gray-600 rounded-md hover:bg-gray-900">
                                     EL PLAN
                                 </a>
                                 @if (auth()->user()->is_admin)
                                     <div class="px-3 py-2 my-2 bg-green-200 rounded-md hover:bg-green-800">
-                                        <a class="inline-block text-base font-medium text-gray-600 no-underline rounded-md hover:text-gray-200 hover:underline"
+                                        <a class="inline-block text-xs text-gray-600 no-underline rounded-md hover:text-gray-200 hover:underline"
                                             href="{{ route('usuarios')}}">
                                             PANEL DE CONTROL
                                         </a>
@@ -78,40 +78,6 @@
                         {{--
                     </div> --}}
                 </div>
-
-                {{-- <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                    <!-- Mobile menu button-->
-                    <button type="button"
-                        class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                        aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <!--
-                        Icon when menu is closed.
-
-                        Heroicon name: outline/menu
-
-                        Menu open: "hidden", Menu closed: "block"
-                        -->
-                        <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <!--
-                        Icon when menu is open.
-
-                        Heroicon name: outline/x
-
-                        Menu open: "block", Menu closed: "hidden"
-                        -->
-                        <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div> --}}
-
                 <div class="flex-grow w-full lg:flex lg:items-center lg:w-auto"
                     {{-- :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" --}}
                     x-show.transition="true">
@@ -125,9 +91,9 @@
                         <div class="hidden lg:flex sm:ml-6">
                             <div class="flex space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <ul class="items-center justify-end flex-1 pt-6 text-sm lg:pt-4 list-reset lg:flex">
+                                <ul class="items-center justify-end flex-1 pt-6 text-xs lg:pt-4 list-reset lg:flex">
                                     <li class="mr-3 bg-green-600 rounded-md hover:bg-green-800">
-                                        <a class="inline-block px-4 py-2 text-gray-200 no-underline hover:text-gray-200 hover:underline"
+                                        <a class="inline-block px-4 py-2 text-gray-200  no-underline hover:text-gray-200 hover:underline"
                                             href="{{ route('dashboard')}}"
                                             {{-- @click="isOpen = false" --}}
                                             >
