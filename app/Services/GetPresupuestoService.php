@@ -26,10 +26,10 @@ class GetPresupuestoService
         // dd($this->presupuestoMaximo);
     }
 
-    public function getPaid(): int
+    public function getPaid(): ?int
     {
         $this->presupuestos = Presupuesto::all();
-
+        $this->paid = 0;
         foreach( $this->presupuestos as $presupuesto){
             if( $presupuesto->pagado){
                 $this->paid += $presupuesto->coste;
@@ -38,12 +38,14 @@ class GetPresupuestoService
         return $this->paid;
     }
 
-    public function getPending(): int
+    public function getPending(): ?int
     {
         $this->presupuestos = Presupuesto::all();
+        $this->pending = 0;
 
         foreach( $this->presupuestos as $presupuesto){
             if( !$presupuesto->pagado){
+                // $this->pending += $presupuesto->coste;
                 $this->pending += $presupuesto->coste;
             }
         }

@@ -17,9 +17,9 @@ class PresupuestoTotal extends Component
     {
         $this->getPresupuesto = $getPresupuesto;
 
-        $this->presupuestoMaximo = $this->getPresupuesto->getMax()->total;
-        $this->paid = $this->getPresupuesto->getPaid();
-        $this->pending = $this->getPresupuesto->getPending();
+        $this->presupuestoMaximo =  isset($this->getPresupuesto->getMax()->total) ? $this->getPresupuesto->getMax()->total : 0 ;
+        $this->paid = ($this->getPresupuesto->getPaid() != null ) ? $this->getPresupuesto->getPaid() : 0;
+        $this->pending = $this->getPresupuesto->getPending() ? $this->getPresupuesto->getPending() : 0;
         $this->balance = $this->presupuestoMaximo - ($this->paid + $this->pending);
     }
 

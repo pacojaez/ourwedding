@@ -18,8 +18,6 @@ class CuentaAtras extends Component
 
     public function render()
     {
-        // dd(session());
-        // dd(Cookie::get(ourwedding_session));
         return view('livewire.cuenta-atras');
     }
 

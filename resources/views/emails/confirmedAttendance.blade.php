@@ -694,7 +694,7 @@
                                                                                                     <div>
                                                                                                         <h1 class="default-heading1"
                                                                                                             style="color: #1F2D3D; font-family: arial,helvetica,sans-serif; font-size: 36px; margin: 0px;">
-                                                                                                           ¡¡¡¡¡MUCHAS GRACIAS POR VENIR!!!!!!!!!
+                                                                                                           ¡¡Muchas gracias por venir!!
                                                                                                         </h1>
                                                                                                     </div>
                                                                                                 </td>

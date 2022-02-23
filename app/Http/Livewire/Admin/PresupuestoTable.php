@@ -41,7 +41,12 @@ class PresupuestoTable extends Component
 
         $presupuestoMaxActual = new GetPresupuestoService();
 
-        $presupuestoMaximo = $presupuestoMaxActual->getMax()->total;
+        if( isset($presupuestoMaxActual->getMax()->total)){
+            $presupuestoMaximo = $presupuestoMaxActual->getMax()->total;
+        }else{
+            $presupuestoMaximo = 0;
+        }
+
 
         // logic moved to GetPresupuestoService
         // foreach( $this->presupuestos as $presupuesto){
