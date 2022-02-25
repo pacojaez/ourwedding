@@ -19,7 +19,7 @@ class CreatePresupuestosTable extends Migration
             $table->string('contacto')->nullable();
             $table->string('observaciones')->nullable();
             $table->double('coste');
-            $table->boolean('pagado');
+            $table->smallInteger('pagado');
             $table->timestamps();
         });
     }

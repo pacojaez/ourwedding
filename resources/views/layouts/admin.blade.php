@@ -27,14 +27,18 @@
 
     <!-- Scripts -->
 
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    <script defer src="{{ mix('js/app.js') }}"></script>
 
     <script type="module">
         import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
     </script>
 
     <!-- ANIME -->
-    <script src="{{ asset('js/anime.min.js')}}"></script>
+    <script src="{{ asset('js/anime.min.js')}}" defer></script>
+    <!-- Alpine v3 -->
+    {{-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
+    {{-- <script src="https://unpkg.com/alpinejs" defer></script> --}}
+    {{-- <script defer src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js"></script> --}}
 
 </head>
 
@@ -61,10 +65,6 @@
     </div>
     @livewireScripts
     <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false" data-turbo-eval="false"></script>
-    <!-- Alpine v3 -->
-    <script defer src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js"></script>
-    <!-- ANIME -->
-    <script src="{{ asset('js/anime.min.js')}}" defer></script>
     @stack('scripts')
 </body>
 

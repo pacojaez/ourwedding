@@ -8,6 +8,12 @@ use App\Services\GetPresupuestoService;
 
 class ChartsApiController extends Controller
 {
+
+    /**
+     * Gets the data from the DB and returns a JSON
+     *
+     * @return json
+     */
     public function index()
     {
         $presupuestos = PresupuestoMaximo::all();

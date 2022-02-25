@@ -7,14 +7,11 @@ use Livewire\Component;
 
 class AllCancions extends Component
 {
-    // protected $listeners = ['addedSong' => 'addedSong'];
-
-    // public function addedSong (){
-
-    //     // session()->flash('message', 'Canción añadida correctamente.....¡¡ANOTHER ONE, PLEASE!!!!');
-
-    // }
-
+    /**
+     * get all the songs from the DB and renders the wiew
+     *
+     * @return void
+     */
     public function render()
     {
         $cancions = Cancion::orderByDesc('created_at')

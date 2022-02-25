@@ -10,13 +10,27 @@ use Illuminate\Support\Facades\Mail;
 
 class ConfirmAttendance extends Component
 {
+    /**
+     * listener to refresh the page
+     *
+     * @var array
+     */
     protected $listeners = ['confirmed' => '$refresh'];
 
-    public $confirmingAttendance = false;
+    /**
+     * variable for confirming the attendance, default false
+     *
+     * @var boolean
+     */
+    public bool $confirmingAttendance = false;
 
+    /**
+     * Changes to true the attendance after User´s confirmation
+     * Send a mail to the user email CC admins
+     *
+     * @return void
+     */
     public function save(){
-
-        // $this->emit('confirmed');
 
         $this->confirmingAttendance = true;
         $id = auth()->user()->id;
@@ -31,6 +45,11 @@ class ConfirmAttendance extends Component
 
     }
 
+    /**
+     * render the view with the variables
+     *
+     * @return void
+     */
     public function render()
     {
         return view('livewire.confirm-attendance', [

@@ -77,6 +77,7 @@
         *[class="gmail-fix"] {
             display: none !important;
         }
+
     </style>
     <style type="text/css" emogrify="no">
         @media (max-width: 600px) {
@@ -84,6 +85,7 @@
                 content: ' \03D1';
             }
         }
+
     </style>
     <style type="text/css" emogrify="no">
         @media (max-width: 600px) {
@@ -341,10 +343,12 @@
                 display: table-cell !important
             }
         }
+
     </style>
     <!--[if !mso]><!-->
     <style type="text/css" emogrify="no">
         @import url("https://fonts.googleapis.com/css2?family=Montserrat");
+
     </style>
     <!--<![endif]-->
     <style type="text/css">
@@ -428,6 +432,7 @@
             visibility: hidden;
             width: 0;
         }
+
     </style>
     <!--[if mso]><xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml><![endif]-->
     <style type="text/css">
@@ -435,6 +440,7 @@
             color: #0092ff;
             text-decoration: underline
         }
+
     </style>
 </head>
 
@@ -546,7 +552,8 @@
                                 <tr>
                                     <td class="r3-c" align="center">
                                         <table cellspacing="0" cellpadding="0" border="0" role="presentation"
-                                            width="600" class="r4-o" style="table-layout: fixed; width: 600px;">
+                                            width="600" class="r4-o"
+                                            style="table-layout: fixed; width: 600px;">
                                             <!-- -->
                                             <tr class="nl2go-responsive-hide">
                                                 <td height="20" style="font-size: 20px; line-height: 20px;">­</td>
@@ -558,7 +565,8 @@
                                                         <tr>
                                                             <th width="100%" valign="top" class="r6-c">
                                                                 <table cellspacing="0" cellpadding="0" border="0"
-                                                                    role="presentation" width="100%" class="r1-o"
+                                                                    role="presentation" width="100%"
+                                                                    class="r1-o"
                                                                     style="table-layout: fixed; width: 100%;">
                                                                     <!-- -->
                                                                     <tr>
@@ -570,11 +578,13 @@
                                                                                 cellpadding="0" border="0"
                                                                                 role="presentation">
                                                                                 <tr>
-                                                                                    <td class="r13-c" align="center">
+                                                                                    <td class="r13-c"
+                                                                                        align="center">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="200" class="r14-o"
+                                                                                            width="200"
+                                                                                            class="r14-o"
                                                                                             style="table-layout: fixed; width: 200px;">
                                                                                             <tr
                                                                                                 class="nl2go-responsive-hide">
@@ -635,7 +645,8 @@
                                 <tr>
                                     <td class="r16-c" align="center">
                                         <table cellspacing="0" cellpadding="0" border="0" role="presentation"
-                                            width="100%" class="r9-o" style="table-layout: fixed; width: 100%;">
+                                            width="100%" class="r9-o"
+                                            style="table-layout: fixed; width: 100%;">
                                             <!-- -->
                                             <tr class="nl2go-responsive-hide">
                                                 <td height="20"
@@ -649,7 +660,8 @@
                                                         <tr>
                                                             <th width="100%" valign="top" class="r6-c">
                                                                 <table cellspacing="0" cellpadding="0" border="0"
-                                                                    role="presentation" width="100%" class="r1-o"
+                                                                    role="presentation" width="100%"
+                                                                    class="r1-o"
                                                                     style="table-layout: fixed; width: 100%;">
                                                                     <!-- -->
                                                                     <tr>
@@ -661,11 +673,13 @@
                                                                                 cellpadding="0" border="0"
                                                                                 role="presentation">
                                                                                 <tr>
-                                                                                    <td class="r18-c" align="left">
+                                                                                    <td class="r18-c"
+                                                                                        align="left">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="100%" class="r19-o"
+                                                                                            width="100%"
+                                                                                            class="r19-o"
                                                                                             style="table-layout: fixed; width: 100%;">
                                                                                             <tr
                                                                                                 class="nl2go-responsive-hide">
@@ -694,7 +708,9 @@
                                                                                                     <div>
                                                                                                         <h1 class="default-heading1"
                                                                                                             style="color: #1F2D3D; font-family: arial,helvetica,sans-serif; font-size: 36px; margin: 0px;">
-                                                                                                           ¡¡Muchas gracias por venir!!
+                                                                                                            ¡¡Muchas
+                                                                                                            gracias por
+                                                                                                            venir!!
                                                                                                         </h1>
                                                                                                     </div>
                                                                                                 </td>
@@ -703,11 +719,13 @@
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="r16-c" align="center">
+                                                                                    <td class="r16-c"
+                                                                                        align="center">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="570" class="r9-o"
+                                                                                            width="570"
+                                                                                            class="r9-o"
                                                                                             style="table-layout: fixed; width: 570px;">
                                                                                             <tr
                                                                                                 class="nl2go-responsive-hide">
@@ -757,7 +775,8 @@
                                 <tr>
                                     <td class="r16-c" align="center">
                                         <table cellspacing="0" cellpadding="0" border="0" role="presentation"
-                                            width="100%" class="r9-o" style="table-layout: fixed; width: 100%;">
+                                            width="100%" class="r9-o"
+                                            style="table-layout: fixed; width: 100%;">
                                             <!-- -->
                                             <tr class="nl2go-responsive-hide">
                                                 <td height="20"
@@ -771,7 +790,8 @@
                                                         <tr>
                                                             <th width="50%" valign="top" class="r6-c">
                                                                 <table cellspacing="0" cellpadding="0" border="0"
-                                                                    role="presentation" width="100%" class="r1-o"
+                                                                    role="presentation" width="100%"
+                                                                    class="r1-o"
                                                                     style="table-layout: fixed; width: 100%;">
                                                                     <!-- -->
                                                                     <tr>
@@ -783,11 +803,13 @@
                                                                                 cellpadding="0" border="0"
                                                                                 role="presentation">
                                                                                 <tr>
-                                                                                    <td class="r16-c" align="center">
+                                                                                    <td class="r16-c"
+                                                                                        align="center">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="270" class="r9-o"
+                                                                                            width="270"
+                                                                                            class="r9-o"
                                                                                             style="table-layout: fixed; width: 270px;">
                                                                                             <tr>
                                                                                                 <td class=""
@@ -812,7 +834,8 @@
                                                             </th>
                                                             <th width="50%" valign="top" class="r6-c">
                                                                 <table cellspacing="0" cellpadding="0" border="0"
-                                                                    role="presentation" width="100%" class="r1-o"
+                                                                    role="presentation" width="100%"
+                                                                    class="r1-o"
                                                                     style="table-layout: fixed; width: 100%;">
                                                                     <!-- -->
                                                                     <tr>
@@ -824,11 +847,13 @@
                                                                                 cellpadding="0" border="0"
                                                                                 role="presentation">
                                                                                 <tr>
-                                                                                    <td class="r16-c" align="center">
+                                                                                    <td class="r16-c"
+                                                                                        align="center">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="270" class="r9-o"
+                                                                                            width="270"
+                                                                                            class="r9-o"
                                                                                             style="table-layout: fixed; width: 270px;">
                                                                                             <tr>
                                                                                                 <td class="r22-i"
@@ -866,7 +891,8 @@
                                 <tr>
                                     <td class="r16-c" align="center">
                                         <table cellspacing="0" cellpadding="0" border="0" role="presentation"
-                                            width="100%" class="r9-o" style="table-layout: fixed; width: 100%;">
+                                            width="100%" class="r9-o"
+                                            style="table-layout: fixed; width: 100%;">
                                             <!-- -->
                                             <tr class="nl2go-responsive-hide">
                                                 <td height="20"
@@ -880,7 +906,8 @@
                                                         <tr>
                                                             <th width="100%" valign="top" class="r6-c">
                                                                 <table cellspacing="0" cellpadding="0" border="0"
-                                                                    role="presentation" width="100%" class="r1-o"
+                                                                    role="presentation" width="100%"
+                                                                    class="r1-o"
                                                                     style="table-layout: fixed; width: 100%;">
                                                                     <!-- -->
                                                                     <tr>
@@ -892,11 +919,13 @@
                                                                                 cellpadding="0" border="0"
                                                                                 role="presentation">
                                                                                 <tr>
-                                                                                    <td class="r18-c" align="left">
+                                                                                    <td class="r18-c"
+                                                                                        align="left">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="100%" class="r19-o"
+                                                                                            width="100%"
+                                                                                            class="r19-o"
                                                                                             style="table-layout: fixed; width: 100%;">
                                                                                             <tr
                                                                                                 class="nl2go-responsive-hide">
@@ -924,11 +953,13 @@
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="r16-c" align="center">
+                                                                                    <td class="r16-c"
+                                                                                        align="center">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="290" class="r24-o"
+                                                                                            width="290"
+                                                                                            class="r24-o"
                                                                                             style="table-layout: fixed; width: 290px;">
                                                                                             <tr
                                                                                                 class="nl2go-responsive-hide">
@@ -994,7 +1025,8 @@
         </tr>
         <tr>
             <td align="" class="r0-c">
-                <table cellspacing="0" cellpadding="0" border="0" role="presentation" width="100%" class="r27-o"
+                <table cellspacing="0" cellpadding="0" border="0" role="presentation" width="100%"
+                    class="r27-o"
                     style="background-color: #ffffff; background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTI3NTF8MHwxfHNlYXJjaHw5fHx3ZWRkaW5nfGVufDB8fHx8MTY0MjA2MzkxMg&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080'); font-size: 0; table-layout: fixed; width: 100%;">
                     <!-- -->
                     <tr>
@@ -1003,7 +1035,8 @@
                                 <tr>
                                     <td class="r3-c" align="center">
                                         <table cellspacing="0" cellpadding="0" border="0" role="presentation"
-                                            width="600" class="r4-o" style="table-layout: fixed; width: 600px;">
+                                            width="600" class="r4-o"
+                                            style="table-layout: fixed; width: 600px;">
                                             <!-- -->
                                             <tr class="nl2go-responsive-hide">
                                                 <td height="20" style="font-size: 20px; line-height: 20px;">­</td>
@@ -1015,7 +1048,8 @@
                                                         <tr>
                                                             <th width="16.67%" valign="top" class="r6-c">
                                                                 <table cellspacing="0" cellpadding="0" border="0"
-                                                                    role="presentation" width="100%" class="r1-o"
+                                                                    role="presentation" width="100%"
+                                                                    class="r1-o"
                                                                     style="table-layout: fixed; width: 100%;">
                                                                     <!-- -->
                                                                     <tr>
@@ -1027,11 +1061,13 @@
                                                                                 cellpadding="0" border="0"
                                                                                 role="presentation">
                                                                                 <tr>
-                                                                                    <td class="r16-c" align="center">
+                                                                                    <td class="r16-c"
+                                                                                        align="center">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="70" class="r9-o"
+                                                                                            width="70"
+                                                                                            class="r9-o"
                                                                                             style="table-layout: fixed; width: 70px;">
                                                                                             <tr
                                                                                                 class="nl2go-responsive-hide">
@@ -1068,7 +1104,8 @@
                                                             </th>
                                                             <th width="66.67%" valign="top" class="r6-c">
                                                                 <table cellspacing="0" cellpadding="0" border="0"
-                                                                    role="presentation" width="100%" class="r1-o"
+                                                                    role="presentation" width="100%"
+                                                                    class="r1-o"
                                                                     style="table-layout: fixed; width: 100%;">
                                                                     <!-- -->
                                                                     <tr>
@@ -1080,11 +1117,13 @@
                                                                                 cellpadding="0" border="0"
                                                                                 role="presentation">
                                                                                 <tr>
-                                                                                    <td class="r18-c" align="left">
+                                                                                    <td class="r18-c"
+                                                                                        align="left">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="100%" class="r19-o"
+                                                                                            width="100%"
+                                                                                            class="r19-o"
                                                                                             style="table-layout: fixed; width: 100%;">
                                                                                             <tr
                                                                                                 class="nl2go-responsive-hide">
@@ -1138,7 +1177,8 @@
                                                             </th>
                                                             <th width="16.67%" valign="top" class="r6-c">
                                                                 <table cellspacing="0" cellpadding="0" border="0"
-                                                                    role="presentation" width="100%" class="r1-o"
+                                                                    role="presentation" width="100%"
+                                                                    class="r1-o"
                                                                     style="table-layout: fixed; width: 100%;">
                                                                     <!-- -->
                                                                     <tr>
@@ -1150,11 +1190,13 @@
                                                                                 cellpadding="0" border="0"
                                                                                 role="presentation">
                                                                                 <tr>
-                                                                                    <td class="r16-c" align="center">
+                                                                                    <td class="r16-c"
+                                                                                        align="center">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="70" class="r9-o"
+                                                                                            width="70"
+                                                                                            class="r9-o"
                                                                                             style="table-layout: fixed; width: 70px;">
                                                                                             <tr
                                                                                                 class="nl2go-responsive-hide">
@@ -1207,8 +1249,8 @@
         </tr>
         <tr>
             <td align="" class="r0-c">
-                <table cellspacing="0" cellpadding="0" border="0" role="presentation" width="100%" class="r1-o"
-                    style="table-layout: fixed; width: 100%;">
+                <table cellspacing="0" cellpadding="0" border="0" role="presentation" width="100%"
+                    class="r1-o" style="table-layout: fixed; width: 100%;">
                     <!-- -->
                     <tr>
                         <td valign="top" class="r29-i" style="background-color: #eff2f7;">
@@ -1216,7 +1258,8 @@
                                 <tr>
                                     <td class="r3-c" align="center">
                                         <table cellspacing="0" cellpadding="0" border="0" role="presentation"
-                                            width="600" class="r4-o" style="table-layout: fixed; width: 600px;">
+                                            width="600" class="r4-o"
+                                            style="table-layout: fixed; width: 600px;">
                                             <!-- -->
                                             <tr class="nl2go-responsive-hide">
                                                 <td height="20" style="font-size: 20px; line-height: 20px;">­</td>
@@ -1228,7 +1271,8 @@
                                                         <tr>
                                                             <th width="100%" valign="top" class="r6-c">
                                                                 <table cellspacing="0" cellpadding="0" border="0"
-                                                                    role="presentation" width="100%" class="r1-o"
+                                                                    role="presentation" width="100%"
+                                                                    class="r1-o"
                                                                     style="table-layout: fixed; width: 100%;">
                                                                     <!-- -->
                                                                     <tr>
@@ -1240,11 +1284,13 @@
                                                                                 cellpadding="0" border="0"
                                                                                 role="presentation">
                                                                                 <tr>
-                                                                                    <td class="r18-c" align="left">
+                                                                                    <td class="r18-c"
+                                                                                        align="left">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="100%" class="r19-o"
+                                                                                            width="100%"
+                                                                                            class="r19-o"
                                                                                             style="table-layout: fixed; width: 100%;">
                                                                                             <tr
                                                                                                 class="nl2go-responsive-hide">
@@ -1269,11 +1315,13 @@
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="r18-c" align="left">
+                                                                                    <td class="r18-c"
+                                                                                        align="left">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="100%" class="r19-o"
+                                                                                            width="100%"
+                                                                                            class="r19-o"
                                                                                             style="table-layout: fixed; width: 100%;">
                                                                                             <tr>
                                                                                                 <td align="center"
@@ -1294,11 +1342,13 @@
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="r18-c" align="left">
+                                                                                    <td class="r18-c"
+                                                                                        align="left">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="100%" class="r19-o"
+                                                                                            width="100%"
+                                                                                            class="r19-o"
                                                                                             style="table-layout: fixed; width: 100%;">
                                                                                             <tr
                                                                                                 class="nl2go-responsive-hide">
@@ -1325,11 +1375,13 @@
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="r18-c" align="left">
+                                                                                    <td class="r18-c"
+                                                                                        align="left">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="100%" class="r19-o"
+                                                                                            width="100%"
+                                                                                            class="r19-o"
                                                                                             style="table-layout: fixed; width: 100%;">
                                                                                             <tr>
                                                                                                 <td align="center"
@@ -1355,11 +1407,13 @@
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="r18-c" align="left">
+                                                                                    <td class="r18-c"
+                                                                                        align="left">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="100%" class="r19-o"
+                                                                                            width="100%"
+                                                                                            class="r19-o"
                                                                                             style="table-layout: fixed; width: 100%;">
                                                                                             <tr
                                                                                                 class="nl2go-responsive-hide">
@@ -1402,11 +1456,13 @@
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="r8-c" align="center">
+                                                                                    <td class="r8-c"
+                                                                                        align="center">
                                                                                         <table cellspacing="0"
                                                                                             cellpadding="0" border="0"
                                                                                             role="presentation"
-                                                                                            width="100%" class="r9-o"
+                                                                                            width="100%"
+                                                                                            class="r9-o"
                                                                                             style="table-layout: fixed; width: 100%;">
                                                                                             <tr>
                                                                                                 <td valign="top"

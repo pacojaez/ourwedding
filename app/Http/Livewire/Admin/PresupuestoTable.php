@@ -11,42 +11,88 @@ use Database\Seeders\PresupuestoMaximoSeeder;
 
 class PresupuestoTable extends Component
 {
+    /**
+     * a collection of presupuestos
+     *
+     * @var Collection
+     */
     public Collection $presupuestos;
 
+
+    /**
+     * a single presupuesto
+     *
+     * @var
+     */
     public $presupuesto;
 
-    // public $presupuestoMaxActual;
+    /**
+     * A new value for the max Presupuesto
+     *
+     * @var integer
+     */
     public int $presupuestoMaxNuevo = 0;
 
+    /**
+     * A varioable needed to confirm a presupuesto deletion
+     *
+     * @var boolean
+     */
     public bool $confirmingPresupuestoDeletion = false;
+
+    /**
+     * A variable needed to show the modal and add a presupuesto
+     *
+     * @var boolean
+     */
     public bool $confirmingPresupuestoAdd = false;
+
+    /**
+     * A variable needed to show the modal for adding a new max presupuesto
+     *
+     * @var boolean
+     */
     public bool $confirmingPresupuestoMax = false;
 
+    /**
+     * Rules for validate the presupuesto form for a new Presupuesto
+     *
+     * @var array
+     */
     protected $rules = [
-        'presupuesto.concepto' => 'required|string|min:4',
+        'presupuesto.concepto' => 'required|string|min:4|unique:presupuestos,concepto',
         'presupuesto.contacto' => 'nullable',
         'presupuesto.observaciones' => 'nullable',
         'presupuesto.coste' => 'numeric|nullable',
         'presupuesto.pagado' => 'nullable'
     ];
 
+    /**
+     * Array with the error messages to be displayed
+     *
+     * @var array
+     */
+    protected $messages = [
+        'presupuesto.concepto.required' => 'Debes poner un concepto',
+        'presupuesto.concepto.unique' => 'Este concepto ya está en la DB, elije otro nombre',
+    ];
 
-    public function mount(){
-
-    }
-
+    /**
+     * Render the view with the variables needed
+     *
+     * @return void
+     */
     public function render()
     {
         $this->presupuestos = Presupuesto::all();
 
         $presupuestoMaxActual = new GetPresupuestoService();
 
-        if( isset($presupuestoMaxActual->getMax()->total)){
-            $presupuestoMaximo = $presupuestoMaxActual->getMax()->total;
+        if( $presupuestoMaxActual->getMax() != null ){
+            $presupuestoMaximo = $presupuestoMaxActual->getMax();
         }else{
             $presupuestoMaximo = 0;
         }
-
 
         // logic moved to GetPresupuestoService
         // foreach( $this->presupuestos as $presupuesto){
@@ -63,6 +109,11 @@ class PresupuestoTable extends Component
         ]);
     }
 
+    /**
+     * Add a new ax Presupuesto to the DB
+     *
+     * @return void
+     */
     public function presupuestoMaxModified( )
     {
         $newPresupuestoMax = new PresupuestoMaximo();
@@ -76,16 +127,32 @@ class PresupuestoTable extends Component
 
     }
 
+    /**
+     * Resets the page
+     *
+     * @return void
+     */
     public function updatingActive()
     {
         $this->resetPage();
     }
 
+    /**
+     * Resets the page
+     *
+     * @return void
+     */
     public function updatingQ()
     {
         $this->resetPage();
     }
 
+    /**
+     * SortBy function
+     *
+     * @param [type] $field
+     * @return void
+     */
     public function sortBy( $field)
     {
         if( $field == $this->sortBy) {
@@ -94,13 +161,25 @@ class PresupuestoTable extends Component
         $this->sortBy = $field;
     }
 
-    public function confirmPresupuestoDeletion( $id)
+    /**
+     * Gets the id of the presupuesto and sends it to the view to confirm deletion
+     *
+     * @param int $id
+     * @return void
+     */
+    public function confirmPresupuestoDeletion( int $id)
     {
         $this->confirmingPresupuestoDeletion = true;
         $this->presupuesto = Presupuesto::findOrFail($id);
 
     }
 
+
+    /**
+     * Delete the presupuesto and sends a message to the user
+     *
+     * @return void
+     */
     public function deletePresupuesto( )
     {
         $this->presupuesto->delete();
@@ -111,11 +190,20 @@ class PresupuestoTable extends Component
         return redirect()->to('presupuesto');
     }
 
+    /**
+     * Shows the modal for adding a new presupuesto
+     *
+     * @return void
+     */
     public function confirmPresupuestoAdd()
     {
         $this->reset(['presupuesto']);
         $this->confirmingPresupuestoAdd = true;
     }
+
+    /**
+     * Confirm the modal to edit a presupuesto
+     */
 
     public function confirmPresupuestoEdit( Presupuesto $presupuesto )
     {
@@ -124,6 +212,12 @@ class PresupuestoTable extends Component
         $this->confirmingPresupuestoAdd = true;
     }
 
+    /**
+     * Gets via the GetPresupuestoService the max presupuesto from the DB
+     *
+     * @param GetPresupuestoService $getPresupuesto
+     * @return void
+     */
     public function confirmPresupuestoMax( GetPresupuestoService $getPresupuesto)
     {
         $this->reset(['presupuesto']);
@@ -132,23 +226,42 @@ class PresupuestoTable extends Component
         $this->presupuestoMaxActual =  $getPresupuesto->getMax();
     }
 
-
+    /**
+     * save the presupuesto linea
+     *
+     * @return void
+     */
     public function savePresupuesto()
     {
-        // dd($this->presupuesto);
-        $this->validate();
 
         if( isset( $this->presupuesto->id)) {
+
+            $this->rules['presupuesto.concepto'] = 'required|string|min:4';
+
+            $this->validate();
+
             $this->presupuesto->save();
             session()->flash('message', 'Línea de Presupuesto modificada correctamente');
+
+            $this->rules['presupuesto.concepto'] = 'required|string|min:4|unique:presupuestos,concepto';
+
+            // $this->emitSelf('saved');
+            // $this->presupuesto = new Presupuesto();
+
+            // return redirect()->to('presupuesto');
+
         } else {
+
+            $this->validate();
+
             $presupuesto = new Presupuesto();
             $presupuesto->concepto = $this->presupuesto['concepto'];
             $presupuesto->contacto = $this->presupuesto['contacto'];
-            $presupuesto->pagado ? $this->presupuesto['pagado'] : false;
+            $presupuesto->pagado = $this->presupuesto['pagado'] ? 1 : 0;
             $presupuesto->observaciones = $this->presupuesto['observaciones'];
             $presupuesto->coste = $this->presupuesto['coste'];
-            // dd($presupuesto);
+
+
             if($presupuesto->save()){
                 session()->flash('message', 'Linea de Presupuesto añadida correctamente');
             }else{
@@ -159,10 +272,12 @@ class PresupuestoTable extends Component
 
         $this->confirmingPresupuestoAdd = false;
         $this->presupuesto_actual = 0;
-        // $this->emitSelf('presupuestoModified');
-        // $this->emitSelf('confirmed');
-        $this->emitSelf('saved');
-        return redirect()->to('presupuesto');
+
+        $this->presupuesto = new Presupuesto();
+
+        // $this->emitSelf('saved');
+        // return redirect()->to('presupuesto');
+        return redirect(request()->header('Referer'));
 
     }
 

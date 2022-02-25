@@ -9,26 +9,62 @@ use Livewire\Component;
 
 class CancionsForm extends Component
 {
+
+    /**
+     * while loading the variable will be true
+     *
+     * @var boolean
+     */
     public $loading = false;
-    // public $showAlertMessage = false;
-    // public $showSuccessMessage = false;
 
-    public $title;
-    public $author;
-    public $errors;
+    /**
+     * variable for the title of the song
+     *
+     * @var string
+     */
+    public string $title = '';
 
-    public $name;
-    public $email;
+    /**
+     * variable for the author of the song
+     *
+     * @var string
+     */
+    public string $author = '';
 
+    // public $errors;
+    // public $name;
+    // public $email;
+
+    /**
+     * Rules to validate the song attributes
+     *
+     * @var array
+     */
     protected $rules = [
         'title' => 'required|unique:cancions,title',
         'author' => 'required',
     ];
 
+    /**
+     * Array with the error messages to be displayed
+     *
+     * @var array
+     */
+    protected $messages = [
+        'title.required' => 'Necesitamos saber el título de la canción',
+        'title.unique' => 'Esta canción ya está en la lista',
+        // 'title.min:4' => 'El titulo debe tener 4 letras al menos',
+        'author.required' => 'También necesitamos saber el autor',
+        // 'author.min:4' => 'El autor debe tener 4 letras al menos',
+    ];
 
+    /**
+     * Saves the song in the DB
+     *
+     * @return void
+     */
     public function saveCancion()
     {
-        // dd($this->rules);
         $validatedData = $this->validate();
 
         $cancion = new Cancion();
@@ -38,33 +74,21 @@ class CancionsForm extends Component
 
         $cancion = $cancion->save();
 
-        // $this->emitTo('all-cancions', 'addedSong');
         $this->title = '';
         $this->author = '';
 
-        session()->flash('message', 'Canción añadida correctamente.....¡¡ANOTHER ONE, PLEASE!!!!');
+        session()->flash('message', 'Canción añadida correctamente.....¡¡ANOTHER ONE, PLEASE!');
 
         return redirect()->to('/cancions');
     }
 
-    // protected $rules = [
-    //     'title' => 'required|unique',
-    //     'author' => 'required',
-    // ];
-
-    protected $messages = [
-        'title.required' => 'Necesitamos saber el título de la canción',
-        'title.unique' => 'Esta canción ya está en la lista',
-        // 'title.min:4' => 'El titulo debe tener 4 letras al menos',
-        'author.required' => 'También necesitamos saber el autor',
-        // 'author.min:4' => 'El autor debe tener 4 letras al menos',
-
-    ];
-
-
+    /**
+     * renders the wiew with the variables
+     *
+     * @return void
+     */
     public function render()
     {
-        // dd($this->loading);
         return view('livewire.cancions-form', [
             // 'loading' => $this->loading,
         ]);

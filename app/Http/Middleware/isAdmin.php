@@ -10,7 +10,8 @@ use App\Models\User;
 class isAdmin
 {
     /**
-     * Handle an incoming request.
+     * Handle an incoming request, if the user is_admin resolves the request
+     * if not, is redirected to home
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next

@@ -3,29 +3,62 @@ namespace App\Services;
 
 use App\Models\Presupuesto;
 use App\Models\PresupuestoMaximo;
+use Illuminate\Database\Eloquent\Collection;
 
 
 class GetPresupuestoService
 {
-    public $presupuestoMaxActual;
-    public $presupuestos;
+    /**
+     * Variable to store all the presupuesto linea from the DB
+     *
+     * @var Collection|null
+     */
+    public ?Collection $presupuestos;
+
+    /**
+     * Stores the result presupuestMax substracting ( paid plus pending)
+     *
+     * @var integer
+     */
     public int $balance;
+
+    /**
+     * stores the total paid presupuesto linea
+     *
+     * @var integer|null
+     */
     public ?int $paid = null;
+
+    /**
+     * Stores the pending amount
+     *
+     * @var integer|null
+     */
     public ?int $pending = null;
 
-    public int $presupuesto_maximo = 6000;
-    public int $presupuesto_actual = 0;
-    public int $saldo = 0;
+    /**
+     * Variable to get the Max Presupuesto from the DB
+     *
+     * @var integer|null
+     */
+    public ?PresupuestoMaximo $presupuesto_maximo;
 
-    // protected $listeners = ['presupuestoMaxModified' => 'updatePresupuestMax'];
-
+    /**
+     * Updates the max presupuesto in the DB
+     *
+     * @param integer $newMax
+     * @return void
+     */
     public function updatePresupuestoMax( int $newMax )
     {
-
         $this->presupuestoMaximo = $newMax;
-        // dd($this->presupuestoMaximo);
     }
 
+    /**
+     * Gets all the presupuesto linea that have been paid
+     *
+     * @return integer|null
+     */
     public function getPaid(): ?int
     {
         $this->presupuestos = Presupuesto::all();
@@ -38,6 +71,11 @@ class GetPresupuestoService
         return $this->paid;
     }
 
+    /**
+     * Gets all the presupuesto linea pending
+     *
+     * @return integer|null
+     */
     public function getPending(): ?int
     {
         $this->presupuestos = Presupuesto::all();
@@ -52,14 +90,24 @@ class GetPresupuestoService
         return $this->pending;
     }
 
+    /**
+     * Gets the latest presupuestoMaximo entry in the DB
+     *
+     * @return void
+     */
     public function getMax()
     {
-        return $this->presupuestoMaxActual = PresupuestoMaximo::latest()->first();
+        return $this->presupuesto_maximo = PresupuestoMaximo::latest()->first();
     }
 
+    /**
+     * Calculates the diference between the presupuestoMaximo and the sum of all presupuesto lineas
+     *
+     * @return void
+     */
     public function getBalance()
     {
-        return $this->presupuestoMaximo - $this->getPaid();
+        return $this->presupuesto_maximo - $this->getPaid();
     }
 
 }

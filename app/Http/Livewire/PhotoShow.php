@@ -2,85 +2,104 @@
 
 namespace App\Http\Livewire;
 
-use Livewire\Component;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
-use Illuminate\Pagination\Paginator;
-use Illuminate\Support\Collection;
-use Illuminate\Pagination\LengthAwarePaginator;
 use App\Models\Photo;
+use Livewire\Component;
+use Illuminate\Support\Str;
+use Illuminate\Support\Collection;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Database\Eloquent\Collection as Coll;
 
 class PhotoShow extends Component
 {
+    /**
+     * variable that stores all the photos
+     *
+     * @var [type]
+     */
     protected $photos;
-    protected $paths = [];
-    public $classes;
 
-    public $totalRecords;
+    /**
+     * Used this variable if you want to retrieve from the fyleSystem
+     *
+     * @var array
+     */
+    protected $paths = [];
+
+    /**
+     * Undocumented variable
+     *
+     * @var [type]
+     */
+    // public $classes;
+
+    /**
+     * Undocumented variable
+     *
+     * @var [type]
+     */
+    // public $totalRecords;
+
+    /**
+     * Variable to initialize the paginator
+     *
+     * @var integer
+     */
     public $perPage = 10;
 
+    /**
+     * listener to load more photos
+     *
+     * @var array
+     */
     protected $listeners = [
         'load-more' => 'loadMore'
     ];
 
+    /**
+     * Get all the photos from the DB
+     *
+     * @return void
+     */
     public function mount(){
-
-        // $this->photos = Storage::allFiles('public/photos');
-
-        // foreach ($this->photos as $photo ){
-
-        //     date_default_timezone_set('Europe/Madrid');
-        //     $time = Storage::lastModified($photo);
-
-        //     $formatted = date("D, d M Y h:i:s A", $time);
-        //     $photo = Str::substr($photo, 7);
-        //     $object = (object) [
-        //         'photo' => $photo,
-        //         'time' => $formatted,
-        //         'unix_time' => $time
-        //       ];
-        //     array_push($this->paths, $object);
-        // }
-
-        // usort($this->paths, $this->sortBy('unix_time', 'DESC'));
 
         $this->photos = Photo::all();
 
     }
 
-    public function sortBy( $clave, $orden = null ){
-        return function ($a, $b) use ( $clave, $orden) {
-            $result=  ($orden=="DESC") ? strnatcmp($b->$clave, $a->$clave) :  strnatcmp($a->$clave, $b->$clave);
-            return $result;
-      };
-    }
+    /**
+     * Sorts by $clave, order by $order
+     *
+     * @param [type] $clave
+     * @param [type] $orden
+     * @return void
+     */
+    // public function sortBy( $clave, $orden = null ){
+    //     return function ($a, $b) use ( $clave, $orden) {
+    //         $result=  ($orden=="DESC") ? strnatcmp($b->$clave, $a->$clave) :  strnatcmp($a->$clave, $b->$clave);
+    //         return $result;
+    //   };
+    // }
 
+    /**
+     * Adds new 10 photos to the view
+     *
+     * @return void
+     */
     public function loadMore()
     {
         $this->perPage += 10;
 
     }
 
-
     /**
-     * The attributes that are mass assignable.
+     * Renders the views sending the count of total photos, the photos and the amount to be loaded in the nex request
      *
-     * @var array
+     * @return void
      */
-    // public function paginate($items, $page = null, $options = [])
-    // {
-    //     $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
-    //     $items = $items instanceof Collection ? $items : Collection::make($items);
-    //     return new LengthAwarePaginator($items->forPage($page, $this->perPage), $items->count(), $this->perPage, $page, $options);
-    // }
-
     public function render()
     {
-        // $paths = $this->paginate($this->paths);
-        // $this->totalRecords = count($this->paths);
-        // $this->paths = $this->paginate($this->paths);
-        // $paths = $this->paginate($this->paths, $this->perPage);
-        // dd(count($this->paths));
         $count = count(Photo::all());
         $this->photos = Photo::latest()->paginate($this->perPage);
         $this->emit('photoStore');

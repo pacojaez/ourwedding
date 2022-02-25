@@ -8,9 +8,29 @@ use Illuminate\Support\Str;
 
 class MasiaPhotoShow extends Component
 {
-    public $photos;
-    public $paths = [];
 
+    /**
+     * Variable to get all the files from the file system
+     *
+     * @var array
+     */
+    public array $photos;
+
+    /**
+     * Array that get all the paths of of the photos to iterate it in the view
+     *
+     * @var array
+     */
+    public array $paths = [];
+
+    /**
+     * Retrieve all the photos in the folder,
+     * generate an object adding the last datetime the photo has been modified,
+     * generate the path for everyone
+     * and sorts the resultant array
+     *
+     * @return void
+     */
     public function mount(){
 
         $this->photos = Storage::allFiles('public/masia');
@@ -32,6 +52,13 @@ class MasiaPhotoShow extends Component
 
     }
 
+    /**
+     * Sort by $clave, ordered by $orden
+     *
+     * @param [type] $clave
+     * @param [type] $orden
+     * @return callable
+     */
     public function sortBy( $clave, $orden = null ){
         return function ($a, $b) use ( $clave, $orden) {
             $result=  ($orden=="DESC") ? strnatcmp($b->$clave, $a->$clave) :  strnatcmp($a->$clave, $b->$clave);
@@ -39,6 +66,11 @@ class MasiaPhotoShow extends Component
       };
     }
 
+    /**
+     * renders the view with the paths to all the photos in the fyle system
+     *
+     * @return void
+     */
     public function render()
     {
         return view('livewire.masia-photo-show', [
