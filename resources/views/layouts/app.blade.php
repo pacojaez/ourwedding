@@ -156,7 +156,7 @@
     @stack('scripts')
     <!-- Alpine v3 -->
     <script defer src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js"></script>
-
+    {{-- <script src="{{ asset('js/foto.js') }}" defer></script> --}}
 </body>
 
 </html>

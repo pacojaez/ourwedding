@@ -4,45 +4,112 @@
             {{ __('Team Settings') }}
         </h2>
     </x-slot>
-    {{-- <x-slot name="content"> --}}
-    <div class="flex flex-col items-center py-4 sm:w-1/2 xl:w-full sm:py-6">
-        <h2 class="m-2 p-2 text-lg font-bold leading-none text-green-900 shadow-lg xl:text-xl font-abhaya-libre">
+
+    <div class="flex flex-col content-start">
+        <h2 class="w-full p-2 text-lg font-bold leading-none text-green-900 shadow-lg xl:text-xl font-abhaya-libre justify-self-center">
             Este es el menú, esperamos que os guste:
         </h2>
-        {{-- <h4 class="m-2 text-lg font-bold leading-none text-green-900 shadow-lg xl:text-xl font-abhaya-libre">
-            Intolerancias, alergias u otras cuestiones relativas a la comida
-        </h4>
-        <h4 class="m-2 text-lg font-bold leading-none text-green-900 shadow-lg xl:text-xl font-abhaya-libre">
-           Estamos a tiempo de recibir tus sugerencias
-        </h4> --}}
-        <div class="">
-            <ul class="flex flex-row flex-wrap shadow">
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Cóctel de cava</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Xips de verdures</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Olives farcides amb embolcall de seitó</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Guacamole amb bastonets de pa</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Pernil tallat a la vista</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Bufet d’assortit d’embotits</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Bufet d’assortit de formatges</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Canapé de salmó cruixent</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Canapé de mousse d´ànec</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Crestes de tonyina</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Llagostí arrebossat amb patates xips</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Canapé de poma caramelitzada amb foie</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Patates braves</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Verdures amb tempura</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Calamars a l´andalusa</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Croquetes</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Bunyols de bacallà</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Pop a la brasa amb all i julivert</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Bufet d’arrossos- risotto o fideua, paella i arròs negre-</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Vermut, refrescos, aigua i cava</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Vi Blanc Pescador - D.O.Empordà</li>
-                <li class="p-2 m-2 text-gray-800 bg-green-300 rounded-lg shadow-2xl shadow-gray-500">Vi Negre Els Nanos - D.O. Conca de Barberà</li>
-            </ul>
 
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-3 2xl:grid-cols-4">
+            <div class="w-48 h-48 p-2 mx-12 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/coctel.jpg" alt="coctel de cava" title="coctel de cava" />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/xips.jpg" alt="xips de verdures" title="xips de verdures" />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/guacamole.jpg" alt="guacamole " title="guacamole " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/olives.jpg" alt="olives " title="olives " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/pernill.jpg" alt="pernill " title="pernill " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/embotits.jpg" alt="embotits " title="embotits " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/formatges.jpg" alt="formatge " title="formatge " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/canalo.jpg" alt="canalo " title="canalo " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/canapes.jpg" alt="canapes " title="canapes " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/crestes.jpg" alt="crestes " title="crestes " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/llagosti.jpg" alt="llagosti " title="llagosti " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/braves.jpg" alt="braves " title="braves " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/verdures.jpg" alt="verdures " title="verdures " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/calamars.jpg" alt="calamars " title="calamars " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/croquetes.jpg" alt="croquetes " title="croquetes " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/bunyols.jpg" alt="bunyols " title="bunyols " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/pop.jpg" alt="pop " title="pop " />
+                </figure>
+            </div>
+            <div class="w-48 h-48 p-2 mx-6 rounded-lg shadow-lg">
+                <figure id="">
+                    <img class="rounded-lg " src="storage/menu/arrossos.jpg" alt="arrossos " title="arrossos " />
+                </figure>
+            </div>
         </div>
+        <h2 class="w-full p-2 text-lg font-bold leading-none text-green-900 shadow-lg xl:text-xl font-abhaya-libre justify-self-center">
+            Y por supuesto Vinos blanco y tinto, Cavas, Cervezas
+        </h2>
+        <h2 class="w-full p-2 text-lg font-bold leading-none text-green-900 shadow-lg xl:text-xl font-abhaya-libre justify-self-center">
+            Para acabar con un pastel de boda rico rico...
+        </h2>
+
 
     </div>
-{{-- </x-slot> --}}
+
 </x-app-layout>
