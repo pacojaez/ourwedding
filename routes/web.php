@@ -68,6 +68,10 @@ Route::middleware(['isAdmin'])->group(function(){
         return view('usuarios');
     })->name('usuarios');
 
+    Route::get('/habitacions', function(){
+        return view('habitacions');
+    })->name('habitacions');
+
     Route::get('/presupuesto', function(){
         return view('presupuesto');
     })->name('presupuesto');

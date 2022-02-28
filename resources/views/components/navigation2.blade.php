@@ -14,10 +14,10 @@
                                     class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                                     aria-controls="mobile-menu" aria-expanded="false">
                                     <span class="sr-only">Open main menu</span>
-                                    <img class="hidden lg:block w-auto cursor-pointer rounded-xl"
+                                    <img class="hidden w-auto cursor-pointer lg:block rounded-xl"
                                         src="{{ asset('img/OLGAPACOLOGO50x50.png') }}" alt="Olga&Paco">
-                                    <div class="block lg:hidden w-auto cursor-pointer rounded-xl">
-                                        <span class="text-xs text-white p-1 rounded  bg-green-600 ">Menu</span>
+                                    <div class="block w-auto cursor-pointer lg:hidden rounded-xl">
+                                        <span class="p-1 text-xs text-white bg-green-600 rounded ">Menu</span>
                                         <svg class="block w-6 h-6 p-2 m-2 bg-green-600 rounded"
                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke="currentColor" aria-hidden="true">
@@ -82,6 +82,12 @@
                                     </div>
                                     <div class="px-3 py-2 my-2 bg-green-200 rounded-md hover:bg-green-800">
                                         <a class="inline-block text-xs text-gray-600 no-underline rounded-md hover:text-gray-200 hover:underline"
+                                            href="{{ route('habitacions') }}">
+                                            HABITACIONES
+                                        </a>
+                                    </div>
+                                    <div class="px-3 py-2 my-2 bg-green-200 rounded-md hover:bg-green-800">
+                                        <a class="inline-block text-xs text-gray-600 no-underline rounded-md hover:text-gray-200 hover:underline"
                                             href="{{ route('presupuesto') }}">
                                             PRESUPUESTO
                                         </a>
@@ -105,7 +111,7 @@
                                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                                     <ul class="items-center justify-end flex-1 pt-6 text-xs lg:pt-4 list-reset lg:flex">
                                         <li class="mr-3 bg-green-600 rounded-md hover:bg-green-800">
-                                            <a class="inline-block px-4 py-2 text-gray-200  no-underline hover:text-gray-200 hover:underline"
+                                            <a class="inline-block px-4 py-2 text-gray-200 no-underline hover:text-gray-200 hover:underline"
                                                 href="{{ route('dashboard') }}" {{-- @click="isOpen = false" --}}>
                                                 CONFIRMAR ASISTENCIA
                                             </a>
@@ -166,8 +172,12 @@
                                                         {{ __('ONLY ADMINS') }}
                                                     </div>
 
-                                                    <x-jet-dropdown-link href="{{ url('/usuarios') }}">
+                                                    <x-jet-dropdown-link href="{{ route('usuarios') }}">
                                                         {{ __('INVITADOS') }}
+                                                    </x-jet-dropdown-link>
+
+                                                    <x-jet-dropdown-link href="{{ route('habitacions') }}">
+                                                        {{ __('HABITACIONS') }}
                                                     </x-jet-dropdown-link>
 
                                                     <x-jet-dropdown-link href="{{ route('presupuesto') }}">
