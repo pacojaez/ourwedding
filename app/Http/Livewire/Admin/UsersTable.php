@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\User;
 use Livewire\Component;
+use App\Mail\SendNewMail;
 use App\Mail\SendInvitation;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -53,6 +54,14 @@ class UsersTable extends Component
      * @var boolean
      */
     public $confirmingUsuarioAdd = false;
+
+    // /**
+    //  * Variable to show the modal for adding a new user
+    //  *
+    //  * @var boolean
+    //  */
+    // public $confirmNewMail = false;
+
 
     /**
      * Rule to validate the user from the form
@@ -165,6 +174,17 @@ class UsersTable extends Component
     }
 
     /**
+     * shows the modal with the form for adding a new user
+     *
+     * @return void
+     */
+    public function confirmNewMail()
+    {
+        $this->confirmNewMail = true;
+    }
+
+
+    /**
      * shows the modal with the user to be updated
      *
      * @param User $user
@@ -228,4 +248,21 @@ class UsersTable extends Component
         Mail::to($user->email)->cc('pacojaez@gmail.com', 'omatheu@hotmail.com' )->send(new SendInvitation( $user));
 
     }
+
+    // /**
+    //  * Sents a new invitation to a user
+    //  * using the invitation template
+    //  *
+    //  * @param integer $id
+    //  * @return void
+    //  */
+    // public function sendnewMail ( string $subject, string $content )
+    // {
+    //     $users = User::all()->pluck('email');
+    //     dd($users);
+
+    //     foreach( $users as $user ){
+    //         Mail::to($user)->send(new SendNewMail ( $subject, $content));
+    //     }
+    // }
 }

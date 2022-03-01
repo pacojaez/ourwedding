@@ -44,7 +44,7 @@
                                 <th class="p-3 text-left">PLAZAS</th>
                                 <th class="p-3 text-center">OCUPANTE 1</th>
                                 <th class="p-3 text-center">OCUPANTE 2</th>
-                                <th class="p-3 text-center">OCUPANTE 4</th>
+                                <th class="p-3 text-center">OCUPANTE 3</th>
                                 <th class="p-3 text-center">OCUPANTE 4</th>
                                 <th class="p-3 text-left">CAMAS</th>
                                 <th class="p-3 text-left">OBSERVACIONES</th>

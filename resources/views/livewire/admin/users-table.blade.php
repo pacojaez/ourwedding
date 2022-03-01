@@ -34,6 +34,12 @@
                                 Añadir nuevo invitado
                             </x-jet-button>
                         </div>
+                        {{-- <div class="mr-2">
+                            <x-jet-button wire:click="confirmNewMail" class="bg-orange-500 hover:bg-orange-700">
+                                MANDAR MAIL NOVEDADES
+                            </x-jet-button>
+                        </div> --}}
+                        @livewire('new-mail')
                     </div>
                 </div>
                 <div class="flex flex-row justify-start mt-6 lg:justify-center">
@@ -41,7 +47,7 @@
                         <thead class="text-white bg-blue-500">
                             <tr>
                                 <th class="p-3">NOMBRE</th>
-                                <th class="p-3 text-left">email</th>
+                                <th class="p-3 text-left">EMAIL</th>
                                 <th class="p-3 text-left">ADMIN</th>
                                 <th class="p-3 text-left">INVITACION ENVIADA</th>
                                 <th class="p-3 text-left">Confirmado</th>
@@ -179,5 +185,7 @@
         </x-jet-dialog-modal>
 
         {{-- PRUEBA CON MODAL DE PRESUPUESTOS --}}
+
+
     </div>
 </div>
