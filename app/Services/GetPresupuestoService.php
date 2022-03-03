@@ -64,8 +64,8 @@ class GetPresupuestoService
         $this->presupuestos = Presupuesto::all();
         $this->paid = 0;
         foreach( $this->presupuestos as $presupuesto){
-            if( $presupuesto->pagado){
-                $this->paid += $presupuesto->coste;
+            if( $presupuesto->adelantado){
+                $this->paid += $presupuesto->adelantado;
             }
         }
         return $this->paid;
@@ -82,10 +82,8 @@ class GetPresupuestoService
         $this->pending = 0;
 
         foreach( $this->presupuestos as $presupuesto){
-            if( !$presupuesto->pagado){
-                // $this->pending += $presupuesto->coste;
-                $this->pending += $presupuesto->coste;
-            }
+
+            $this->pending += ($presupuesto->coste - $presupuesto->adelantado );
         }
         return $this->pending;
     }
@@ -95,7 +93,7 @@ class GetPresupuestoService
      *
      * @return void
      */
-    public function getMax()
+    public function getMax() : PresupuestoMaximo|null
     {
         return $this->presupuesto_maximo = PresupuestoMaximo::latest()->first();
     }

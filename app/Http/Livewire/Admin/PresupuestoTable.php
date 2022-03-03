@@ -262,11 +262,11 @@ class PresupuestoTable extends Component
 
             $presupuesto = new Presupuesto();
             $presupuesto->concepto = $this->presupuesto['concepto'];
-            $presupuesto->contacto = $this->presupuesto['contacto'];
+            $presupuesto->contacto = isset($this->presupuesto['contacto']) ? $this->presupuesto['contacto'] : '';
             $presupuesto->pagado = isset($this->presupuesto['pagado']) ? 1 : 0;
-            $presupuesto->observaciones = $this->presupuesto['observaciones'];
-            $presupuesto->coste = $this->presupuesto['coste'];
-            $presupuesto->adelantado = $this->presupuesto['adelantado'];
+            $presupuesto->observaciones = isset($this->presupuesto['observaciones']) ? $this->presupuesto['observaciones'] : '';
+            $presupuesto->coste = isset($this->presupuesto['coste']) ? $this->presupuesto['coste'] : 0;
+            $presupuesto->adelantado = isset($this->presupuesto['adelantado']) ? $this->presupuesto['adelantado'] : 0;
 
             if($presupuesto->save()){
                 session()->flash('message', 'Linea de Presupuesto añadida correctamente');
