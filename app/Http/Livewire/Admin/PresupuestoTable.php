@@ -78,6 +78,11 @@ class PresupuestoTable extends Component
         'presupuesto.concepto.unique' => 'Este concepto ya está en la DB, elije otro nombre',
     ];
 
+
+    public function mount()
+    {
+        // $this->presupuesto = new Presupuesto();
+    }
     /**
      * Render the view with the variables needed
      *
@@ -258,10 +263,10 @@ class PresupuestoTable extends Component
             $presupuesto = new Presupuesto();
             $presupuesto->concepto = $this->presupuesto['concepto'];
             $presupuesto->contacto = $this->presupuesto['contacto'];
-            $presupuesto->pagado = $this->presupuesto['pagado'] ? 1 : 0;
+            $presupuesto->pagado = isset($this->presupuesto['pagado']) ? 1 : 0;
             $presupuesto->observaciones = $this->presupuesto['observaciones'];
             $presupuesto->coste = $this->presupuesto['coste'];
-
+            $presupuesto->adelantado = $this->presupuesto['adelantado'];
 
             if($presupuesto->save()){
                 session()->flash('message', 'Linea de Presupuesto añadida correctamente');
