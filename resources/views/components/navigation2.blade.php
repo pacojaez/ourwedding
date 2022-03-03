@@ -92,6 +92,12 @@
                                             PRESUPUESTO
                                         </a>
                                     </div>
+                                    <div class="px-3 py-2 my-2 bg-green-200 rounded-md hover:bg-green-800">
+                                        <a class="inline-block text-xs text-gray-600 no-underline rounded-md hover:text-gray-200 hover:underline"
+                                            href="{{ route('todos') }}">
+                                            COSAS PENDIENTES
+                                        </a>
+                                    </div>
                                 @endif
                             </x-slot>
                         </x-jet-dropdown>
@@ -182,6 +188,10 @@
 
                                                     <x-jet-dropdown-link href="{{ route('presupuesto') }}">
                                                         {{ __('PRESUPUESTO') }}
+                                                    </x-jet-dropdown-link>
+
+                                                    <x-jet-dropdown-link href="{{ route('todos') }}">
+                                                        {{ __('COSAS PENDIENTES') }}
                                                     </x-jet-dropdown-link>
 
                                                     <div class="border-t border-gray-100"></div>

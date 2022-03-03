@@ -64,7 +64,8 @@ class PresupuestoTable extends Component
         'presupuesto.contacto' => 'nullable',
         'presupuesto.observaciones' => 'nullable',
         'presupuesto.coste' => 'numeric|nullable',
-        'presupuesto.pagado' => 'nullable'
+        'presupuesto.pagado' => 'nullable',
+        'presupuesto.adelantado' => 'numeric|nullable',
     ];
 
     /**

@@ -76,4 +76,8 @@ Route::middleware(['isAdmin'])->group(function(){
         return view('presupuesto');
     })->name('presupuesto');
 
+    Route::get('/todos', function(){
+        return view('todos');
+    })->name('todos');
+
 });

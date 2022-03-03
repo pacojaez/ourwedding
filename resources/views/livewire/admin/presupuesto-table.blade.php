@@ -46,8 +46,10 @@
                                 <th class="p-3">CONCEPTO</th>
                                 <th class="p-3 text-left">CONTACTO</th>
                                 <th class="p-3 text-left">OBSERVACIONES</th>
-                                <th class="p-3 text-left">COSTE</th>
+                                <th class="p-3 text-left">TOTAL</th>
                                 <th class="p-3 text-left">PAGADO</th>
+                                <th class="p-3 text-left">A CUENTA</th>
+                                <th class="p-3 text-left">PENDIENTE</th>
                                 <th class="p-3 text-left">Action</th>
                             </tr>
                         </thead>
@@ -67,6 +69,8 @@
                                                 PAGADO</span>
                                         @endif
                                     </td>
+                                    <td class="p-3 text-center">{{ $presupuesto->adelantado }}</td>
+                                    <td class="p-3 text-center">{{ $presupuesto->coste - $presupuesto->adelantado }}</td>
                                     <td class="p-3">
                                         {{-- <a href="#" class="mr-2 text-gray-500 hover:text-gray-100">
                                         <i class="text-base material-icons-outlined">visibility</i>
@@ -161,6 +165,13 @@
                     <x-jet-input type="checkbox" wire:model.defer="presupuesto.pagado" class="form-checkbox" />
                     <span class="ml-2 text-sm text-gray-600">Sí, pagado</span>
                     </label>
+                </div>
+
+                <div class="col-span-6 mt-4 sm:col-span-4">
+                    <x-jet-label for="presupuesto.adelantado" value="{{ __('Adelantado') }}" />
+                    <x-jet-input id="presupuesto.adelantado" type="number" class="block w-full mt-1"
+                        wire:model.defer="presupuesto.adelantado" />
+                    <x-jet-input-error for="presupuesto.adelantado" class="mt-2" />
                 </div>
             </x-slot>
 
