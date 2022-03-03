@@ -92,6 +92,8 @@ class TodoTable extends Component
             $this->validate();
 
             $this->todo->save();
+
+            $this->count = Todo::where('done', false)->count();
             session()->flash('message', 'Tarea modificada correctamente');
 
             $this->rules['todo.title'] = 'required|string|min:4|unique:todos,title';
@@ -103,7 +105,7 @@ class TodoTable extends Component
             $todo = new Todo();
             $todo->title = $this->todo['title'];
             $todo->description = $this->todo['description'];
-            $todo->done = $this->todo['done'];
+            $todo->done = $this->todo['done'] ? 1 : 0;
             $todo->priority = $this->todo['priority'];
 
             if($todo->save()){
@@ -111,6 +113,8 @@ class TodoTable extends Component
             }else{
                 session()->flash('message', 'No se pudo añadir la tarea');
             }
+
+            $this->count = Todo::where('done', false)->count();
         }
 
         $this->confirmingTodoAdd = false;

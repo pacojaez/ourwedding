@@ -23,6 +23,9 @@
     <div class="flex flex-col w-full min-h-screen bg-white">
         <div class="col-span-12">
             <div class="overflow-auto lg:overflow-visible">
+                <div class="flex flex-col pb-1 border-b-2 md:flex-row lg:justify-between border-fuchsia-900">
+                    <h2 class="text-2xl font-bold text-gray-500">PRESUPUESTO</h2>
+                </div>
 
                 @livewire('presupuesto-total')
 
@@ -70,7 +73,8 @@
                                         @endif
                                     </td>
                                     <td class="p-3 text-center">{{ $presupuesto->adelantado }}</td>
-                                    <td class="p-3 text-center">{{ $presupuesto->coste - $presupuesto->adelantado }}</td>
+                                    <td class="p-3 text-center">{{ $presupuesto->coste - $presupuesto->adelantado }}
+                                    </td>
                                     <td class="p-3">
                                         {{-- <a href="#" class="mr-2 text-gray-500 hover:text-gray-100">
                                         <i class="text-base material-icons-outlined">visibility</i>
@@ -110,7 +114,8 @@
                 </x-jet-secondary-button> --}}
 
                 <x-jet-danger-button class="ml-2"
-                    wire:click="deletePresupuesto({{ $confirmingPresupuestoDeletion }})" wire:loading.attr="disabled">
+                    wire:click="deletePresupuesto({{ $confirmingPresupuestoDeletion }})"
+                    wire:loading.attr="disabled">
                     {{ __('Eliminar') }}
                 </x-jet-danger-button>
             </x-slot>
