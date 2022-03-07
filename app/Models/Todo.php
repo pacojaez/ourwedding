@@ -19,5 +19,6 @@ class Todo extends Model
         'description',
         'done',
         'priority',
+        'link'
     ];
 }

@@ -43,6 +43,7 @@ class TodoTable extends Component
         'todo.description' => 'nullable',
         'todo.priority' => 'nullable',
         'todo.done' => 'nullable',
+        'todo.link' => 'nullable'
     ];
 
     public function mount()
@@ -107,6 +108,7 @@ class TodoTable extends Component
             $todo->description = $this->todo['description'];
             $todo->done = $this->todo['done'] ? 1 : 0;
             $todo->priority = $this->todo['priority'];
+            $todo->link = $this->todo['link'];
 
             if($todo->save()){
                 session()->flash('message', 'Tarea añadida correctamente');

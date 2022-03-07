@@ -80,4 +80,10 @@ Route::middleware(['isAdmin'])->group(function(){
         return view('todos');
     })->name('todos');
 
+    Route::get('/clear-cache', function() {
+        $exitCode = Artisan::call('cache:clear');
+        $exitCodeView = Artisan::call('view:clear');
+        return view('cachecleared');
+    })->name('clearcache');
+
 });
