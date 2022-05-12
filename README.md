@@ -10,23 +10,48 @@ OurWedding is a web application developed using the TALL stack (Tailwind, Alpine
 
 It´s a private App where you, as Admin, can invite the people you want to go to your wedding, no one else.
 
+The control Panel it´s only viisible for the admins, so they can:
+-INVITE PEOPLE, here the 'users' are the guests.
+-CHANGE THE ROOMS FOR THE GUESTS
+-CHANGE AND CONTROL THE WEDDING BUDGET
+-TAKE CONTROL OF ALL THE TASKS TO DO, DOING OR DONE FOR THE WEDDING.
+
 ## Some images of the App:
 <p align="center">
-  <img src="https://github.com/pacojaez/americanasTimer/blob/master/material/imgReadMe/AmericanaTimer1.png?raw=true" alt="Americana Portada" width="500">
+  <img src="https://github.com/pacojaez/ourwedding/blob/master/public/img/screenshots/ourWedding1.png?raw=true" alt="Americana Portada" width="500">
 </p>
 <p align="center">
-  <img src="https://github.com/pacojaez/americanasTimer/blob/master/material/imgReadMe/AmericanaTimer2.png?raw=true" alt="Americana Portada" width="500">
+  <img src="https://github.com/pacojaez/ourwedding/blob/master/public/img/screenshots/ourWedding2.png?raw=true" alt="Americana Portada" width="500">
 </p>
 <p align="center">
-  <img src="https://github.com/pacojaez/americanasTimer/blob/master/material/imgReadMe/AmericanaTimer3.png?raw=true" alt="Americana Portada" width="500">
+  <img src="https://github.com/pacojaez/ourwedding/blob/master/public/img/screenshots/ourWedding3.png?raw=true" alt="Americana Portada" width="500">
 </p>
 <p align="center">
-  <img src="https://github.com/pacojaez/americanasTimer/blob/master/material/imgReadMe/AmericanaTimer4.png?raw=true" alt="Americana Portada" width="500">
+  <img src="https://github.com/pacojaez/ourwedding/blob/master/public/img/screenshots/ourWedding4.png?raw=true" alt="Americana Portada" width="500">
 </p>
 <p align="center">
-  <img src="https://github.com/pacojaez/americanasTimer/blob/master/material/imgReadMe/AmericanaTimer5.png?raw=true" alt="Americana Portada" width="500">
+  <img src="https://github.com/pacojaez/ourwedding/blob/master/public/img/screenshots/ourWedding5.png?raw=true" alt="Americana Portada" width="500">
+</p>
+<p align="center">
+  <img src="https://github.com/pacojaez/ourwedding/blob/master/public/img/screenshots/ourWedding6.png?raw=true" alt="Americana Portada" width="500">
+</p>
+<p align="center">
+  <img src="https://github.com/pacojaez/ourwedding/blob/master/public/img/screenshots/ourWedding7.png?raw=true" alt="Americana Portada" width="500">
 </p>
 
+## Installation
+
+Clone the repo or download ZIP and extract it.
+
+```php
+composer install
+```
+
+```js
+npm install && npm run dev
+```
+
+That´s all.
 
 ## Contributing
 
