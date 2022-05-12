@@ -10,11 +10,12 @@ OurWedding is a web application developed using the TALL stack (Tailwind, Alpine
 
 It´s a private App where you, as Admin, can invite the people you want to go to your wedding, no one else.
 
-The control Panel it´s only viisible for the admins, so they can:
--INVITE PEOPLE, here the 'users' are the guests.
--CHANGE THE ROOMS FOR THE GUESTS
--CHANGE AND CONTROL THE WEDDING BUDGET
--TAKE CONTROL OF ALL THE TASKS TO DO, DOING OR DONE FOR THE WEDDING.
+The control Panel it´s only visible for the admins, so they can:
+
+* -INVITE PEOPLE, here the 'users' are the guests.
+* -CHANGE THE ROOMS FOR THE GUESTS
+* -CHANGE AND CONTROL THE WEDDING BUDGET
+* -TAKE CONTROL OF ALL THE TASKS TO DO, DOING OR DONE FOR THE WEDDING.
 
 ## Some images of the App:
 <p align="center">
