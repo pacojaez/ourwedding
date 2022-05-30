@@ -22,7 +22,12 @@ class PresupuestoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'concepto' => $this->faker->sentence(6),
+            'contacto' => $this->faker->email(),
+            'observaciones' => $this->faker->sentence(5),
+            'coste' => $this->faker->randomElement([100, 3000, 250, 1800, 4000, 400, 180, 500, 675]),
+            'pagado' => $this->faker->randomElement([0,1]),
+            'adelantado' => $this->faker->numberBetween( 100, 3000),
         ];
     }
 }

@@ -41,7 +41,7 @@ class CancionsForm extends Component
      * @var array
      */
     protected $rules = [
-        'title' => 'required|unique:cancions,title',
+        'title' => 'required|unique:cancions,title|max:255',
         'author' => 'required',
     ];
 
@@ -52,6 +52,7 @@ class CancionsForm extends Component
      */
     protected $messages = [
         'title.required' => 'Necesitamos saber el título de la canción',
+        'title.max' => 'Nombre demasiado largo para el título de la canción',
         'title.unique' => 'Esta canción ya está en la lista',
         // 'title.min:4' => 'El titulo debe tener 4 letras al menos',
         'author.required' => 'También necesitamos saber el autor',

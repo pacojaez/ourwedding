@@ -1,18 +1,19 @@
 <div class="flex flex-col items-center justify-center w-full">
-    <h4 class="text-green-900 text-xl">ESTAS SON LAS CANCIONES QUE HABEIS PROPUESTO</h4>
+    <h4 class="text-xl text-green-900">ESTAS SON LAS CANCIONES QUE HABEIS PROPUESTO</h4>
     <table class="w-full mx-24 mt-2 border border-collapse border-gray-500 table-fixed">
       <thead class="">
         <tr class="border-b-2 border-black">
           <th class="w-1/2 px-2 text-center bg-gray-300">CANCIÓN</th>
           <th class="w-1/2 px-2 text-center bg-gray-300">AUTOR/INTÉRPRETE</th>
+          <th class="w-1/2 px-2 text-center bg-gray-300">Estilo</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-gray-400">
           @foreach ($cancions as $cancion)
           <tr class="bg-green-200">
-            <td class="px-2 text-xl text-left uppercase text-ellipsis overflow-hidden"> {{ $cancion->title }}</td>
-            <td class="px-2 text-xl uppercase text-ellipsis overflow-hidden"> {{ $cancion->author }}</td>
-
+            <td class="px-2 overflow-hidden text-xl text-left uppercase text-ellipsis"> {{ $cancion->title }}</td>
+            <td class="px-2 overflow-hidden text-xl uppercase text-ellipsis"> {{ $cancion->author }}</td>
+            <td class="px-2 overflow-hidden text-xl uppercase text-ellipsis"> {{ $cancion->style }}</td>
           </tr>
           @endforeach
 

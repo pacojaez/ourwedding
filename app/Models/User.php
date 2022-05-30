@@ -61,4 +61,11 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+     * Relationship with songs
+     */
+    public function cancions(){
+        return $this->hasMany( Cancion::class);
+    }
 }

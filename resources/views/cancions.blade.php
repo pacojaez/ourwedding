@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-gallery-layout>
         @livewire('cancions-form')
     </div>
-</x-app-layout>
+</x-gallery-layout>

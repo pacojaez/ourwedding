@@ -22,7 +22,7 @@ class PresupuestoMaximoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'total' => $this->faker->numberBetween(6000, 25000)
         ];
     }
 }

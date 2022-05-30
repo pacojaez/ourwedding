@@ -68,6 +68,15 @@ class PhotoUpload extends Component
     }
 
     /**
+     * Mount with the description field empty
+     *
+     * @return void
+     */
+    public function mount() {
+        $this->description = '';
+    }
+
+    /**
      * renders the form to add a new photo
      *
      * @return void

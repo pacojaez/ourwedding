@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\PresupuestoMaximo;
 use Illuminate\Database\Seeder;
 
 class PresupuestoMaximoSeeder extends Seeder
@@ -13,6 +14,7 @@ class PresupuestoMaximoSeeder extends Seeder
      */
     public function run()
     {
-        //
+        PresupuestoMaximo::factory()
+            ->create();
     }
 }

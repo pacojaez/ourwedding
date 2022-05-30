@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Cancion;
 use Illuminate\Database\Seeder;
 
 class CancionSeeder extends Seeder
@@ -13,6 +14,8 @@ class CancionSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Cancion::factory()
+            ->count(25)
+            ->create();
     }
 }

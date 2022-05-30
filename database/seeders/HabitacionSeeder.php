@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Habitacion;
 use Illuminate\Database\Seeder;
 
-class HabitacionsSeeder extends Seeder
+class HabitacionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +14,8 @@ class HabitacionsSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Habitacion::factory()
+            ->count(20)
+            ->create();
     }
 }

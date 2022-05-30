@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Photo;
 use Illuminate\Database\Seeder;
 
 class PhotoSeeder extends Seeder
@@ -13,6 +14,9 @@ class PhotoSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Photo::factory()
+            ->count(5)
+            ->create();
+
     }
 }

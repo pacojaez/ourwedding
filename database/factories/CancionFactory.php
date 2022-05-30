@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use App\Models\Cancion;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +23,10 @@ class CancionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->sentence(3),
+            'author' => $this->faker->name(),
+            'style' => $this->faker->randomElement(['Rock', 'Pop', 'K-pop', 'Rumba', 'Vals', 'Salsa', 'Bachata']),
+            'user_id' => User::all()->random()->id,
         ];
     }
 }
