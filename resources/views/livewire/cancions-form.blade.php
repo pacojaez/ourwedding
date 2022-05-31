@@ -5,7 +5,7 @@
             <div class="md:flex md:flex-wrap">
                 <div class="md:w-full md:mx-auto">
                     <div class="p-6 bg-white border-t-8 border-green-900 rounded shadow opacity-100">
-                        <div class="flex flex-col items-center py-4 w-full">
+                        <div class="flex flex-col items-center w-full py-4">
                             @if (session()->has('message'))
                             <div class="flex p-4 mb-4 text-lg text-green-800 bg-green-100 rounded-lg" role="alert"
                                 x-data="{ show: true }" x-show="show"
@@ -62,6 +62,25 @@
                                         @error('author') <span
                                             class="p-4 my-4 text-orange-700 bg-orange-100 border-l-4 border-orange-500"
                                             x-transition:enter="transition ease-out duration-300">
+                                            {{ $message }}
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="style" class="block mb-1 font-bold text-gray-700">
+                                        Estilo
+                                    </label>
+                                    <div class="relative flex flex-col w-full">
+                                        <input type="text" wire:model="style">
+                                        @error('style') <span
+                                            class="p-4 my-4 text-orange-700 bg-orange-100 border-l-4 border-orange-500"
+                                            x-transition:enter="transition ease-out duration-300"
+                                            x-transition:enter-start="opacity-0 transform scale-90"
+                                            x-transition:enter-end="opacity-100 transform scale-100"
+                                            x-transition:leave="transition ease-in duration-300"
+                                            x-transition:leave-start="opacity-100 transform scale-100"
+                                            x-transition:leave-end="opacity-0 transform scale-90">
                                             {{ $message }}
                                         </span>
                                         @enderror

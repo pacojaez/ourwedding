@@ -31,6 +31,13 @@ class CancionsForm extends Component
      */
     public string $author = '';
 
+    /**
+     * variable for the style of the song
+     *
+     * @var string
+     */
+    public string $style = '';
+
     // public $errors;
     // public $name;
     // public $email;
@@ -43,6 +50,7 @@ class CancionsForm extends Component
     protected $rules = [
         'title' => 'required|unique:cancions,title|max:255',
         'author' => 'required',
+        'style' => 'required'
     ];
 
     /**
@@ -57,6 +65,7 @@ class CancionsForm extends Component
         // 'title.min:4' => 'El titulo debe tener 4 letras al menos',
         'author.required' => 'También necesitamos saber el autor',
         // 'author.min:4' => 'El autor debe tener 4 letras al menos',
+        'style.required' => 'También necesitamos saber el estilo de música',
     ];
 
     /**
@@ -71,12 +80,14 @@ class CancionsForm extends Component
         $cancion = new Cancion();
         $cancion->title = $validatedData['title'];
         $cancion->author = $validatedData['author'];
+        $cancion->style = $validatedData['style'];
         $cancion->user_id = Auth::user()->id;
 
         $cancion = $cancion->save();
 
         $this->title = '';
         $this->author = '';
+        $this->style = '';
 
         session()->flash('message', 'Canción añadida correctamente.....¡¡ANOTHER ONE, PLEASE!');
 
