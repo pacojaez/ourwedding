@@ -200,7 +200,7 @@
                 <div class="col-span-6 sm:col-span-4">
                     <x-jet-label for="presupuestoMax" value="{{ __('Presupuesto Máximo Actual') }}" />
                     {{-- <x-jet-input id="presupuesto.concepto" type="text" class="block w-full mt-1" wire:model.defer="presupuesto.concepto" /> --}}
-                    {{ $presupuestoMaximo }} €
+                    {{ $presupuestoMaximo->total }} €
                     {{-- <x-jet-input-error for="presupuesto.concepto" class="mt-2" /> --}}
                 </div>
 
