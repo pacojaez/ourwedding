@@ -15,6 +15,7 @@ class PresupuestoMaximoSeeder extends Seeder
     public function run()
     {
         PresupuestoMaximo::factory()
+            ->count(6)
             ->create();
     }
 }

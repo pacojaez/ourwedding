@@ -82,6 +82,7 @@
     <script defer src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js"></script>
     <!-- ANIME -->
     <script src="{{ asset('js/anime.min.js')}}" defer></script>
+    <script src="{{ asset('js/foto.js')}}" defer></script>
 </body>
 
 </html>

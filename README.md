@@ -52,6 +52,41 @@ composer install
 npm install && npm run dev
 ```
 
+You need to config your database .env file
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=ourwedding
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+run to get dummy data
+
+```php
+php artisan migrate:refresh --seed
+```
+And you need to config your mail smtp
+
+```
+MAIL_MAILER=smtp
+MAIL_HOST=mailhog
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=null
+MAIL_FROM_NAME="${APP_NAME}"
+```
+
+Once you´ve the Database log in with:
+
+# USER: admin@admin.com
+# PASSWORD: password
+
+
 That´s all.
 
 ## Contributing

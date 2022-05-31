@@ -6,6 +6,8 @@
             <div class="flex flex-col flex-wrap justify-center w-full p-2 m-2 bg-gray-200 border-gray-300 rounded-sm lg:w-1/5 sm:w-1/2 border-1">
                 <figure id="">
                     <img class="rounded-sm cursor-pointer" onclick="ver(this)" src="storage/{{ $photo->route }}" alt="" title="" />
+                    {{-- <img class="rounded-sm cursor-pointer" onclick="ver(this)" src="/{{ $photo->route }}" alt="" title="" /> --}}
+
                 </figure>
                 <h3 class="">{{ $photo->description }}</h3>
                 <h3>Creada el {{ $photo->created_at }}</h3>
