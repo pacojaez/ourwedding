@@ -4,11 +4,12 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\Todo;
 use Livewire\Component;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Collection;
 
 class TodoTable extends Component
 {
-    public ?Collection $todos;
+    public $todos;
 
     // public bool $done;
 
@@ -55,6 +56,7 @@ class TodoTable extends Component
     public function render()
     {
         $this->todos = Todo::all();
+
         $this->count = Todo::where('done', false)->count();
 
         return view('livewire.admin.todo-table', [

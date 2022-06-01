@@ -28,6 +28,7 @@
     <!-- Scripts -->
 
     <script defer src="{{ mix('js/app.js') }}"></script>
+    <script defer src="{{ mix('js/todosFilter.js') }}" defer></script>
 
     <script type="module">
         import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';

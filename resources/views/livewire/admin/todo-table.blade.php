@@ -3,7 +3,7 @@
         <div class="overflow-auto lg:overflow-visible">
             <div class="flex flex-col w-full pb-1 border-b-2 lg:justify-center border-fuchsia-900">
                 <h2 class="text-2xl font-bold text-gray-500">TAREAS PENDIENTES</h2>
-                <div class="flex flex-col justify-between md:flex-row mt-8 text-2xl w-full">
+                <div class="flex flex-col justify-between w-full mt-8 text-2xl md:flex-row">
                     <h3 class="text-xl font-bold text-gray-700">Actualmente te quedan por hacer {{ $count }} tareas </h3>
                     <div class="mr-2">
                         <x-jet-button wire:click="confirmTodoAdd" class="bg-blue-500 hover:bg-blue-700">
@@ -14,25 +14,46 @@
             </div>
         </div>
     </div>
-    <div class="bg-blue w-full p-8 flex flex-wrap justify-center space-x-2 font-sans">
-        @foreach ($todos as $todo)
-            <div @class([
-                'p-4',
-                'rounded',
-                'w-64',
+    <div class="col-span-12">
+        <div class="overflow-auto lg:overflow-visible">
+            <div class="flex flex-col w-full pb-1 border-b-2 md:flex-row lg:justify-center border-fuchsia-900">
+                <button class="p-2 m-2 text-lg font-semibold text-green-500 bg-gray-600 rounded hover:text-xl" onclick="change(this)" data-set="all">TODAS LAS TAREAS</button>
+                <button class="p-2 m-2 text-lg font-semibold text-green-500 bg-gray-400 rounded" onclick="change(this)" data-set="done">TAREAS HECHAS</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-span-12">
+        <div class="overflow-auto lg:overflow-visible">
+            <div class="flex flex-col w-full pb-1 border-b-2 md:flex-row lg:justify-center border-fuchsia-900">
+                <button class="p-2 m-2 text-lg font-bold text-red-900 bg-gray-400 rounded" onclick="change(this)" data-set="notDone">TAREAS POR HACER</button>
+                <button class="p-2 m-2 text-lg font-bold text-red-700 bg-gray-400 rounded" onclick="change(this)" data-set="Alta">PRIORIDAD ALTA</button>
+                <button class="p-2 m-2 text-lg font-bold text-red-500 bg-gray-400 rounded" onclick="change(this)" data-set="Media">PRIORIDAD MEDIA</button>
+                <button class="p-2 m-2 text-lg font-bold text-red-400 bg-gray-400 rounded" onclick="change(this)" data-set="Baja">PRIORIDAD BAJA</button>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-wrap justify-center w-full p-2 space-x-2 font-sans bg-blue" id="todos_list">
+        @foreach ( $todos as $todo )
+            <section @class([
                 'p-2',
-                'm-4',
+                'rounded',
+                'w-48',
+                'm-2',
+                'block',
                 'bg-green-200' => $todo->done,
                 'font-bold' => !$todo->done,
                 'bg-gray-400' => !$todo->done,
-                ])>
+                ])
+                data-status = {{ $todo->done }}
+                data-priority = {{ $todo->priority }}
+            >
                 <div class="flex justify-between py-1">
                     <h3 class="text-lg font-bold"> {{ $todo->title }} </h3>
                 </div>
                 <div class="flex flex-row justify-between p-4 rounded ">
                     <button wire:click="confirmTodoEdit( {{ $todo }})"
-                        class="h-6 hover:bg-gray-200 rounded font-bold bg-gray-500">
-                        <svg class="h-6 fill-current text-grey-dark cursor-pointer" xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 font-bold bg-gray-500 rounded hover:bg-gray-200">
+                        <svg class="h-6 cursor-pointer fill-current text-grey-dark" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24">
                             <path
                                 d="M5 10a1.999 1.999 0 1 0 0 4 1.999 1.999 0 1 0 0-4zm7 0a1.999 1.999 0 1 0 0 4 1.999 1.999 0 1 0 0-4zm7 0a1.999 1.999 0 1 0 0 4 1.999 1.999 0 1 0 0-4z" />
@@ -52,16 +73,28 @@
                                 {{ $todo->priority }}
                             </p>
                         </div>
+                    @else
+                        <div @class([
+                                'h-8',
+                                'rounded',
+                                'justify-center',
+                                'items-center',
+                                'bg-green-500',
+                            ])>
+                            <p class="m-1 text-sm font-bold">
+                                COMPLETADA
+                            </p>
+                        </div>
                     @endif
                 </div>
                 <div>
-                    <div class="bg-white p-2 rounded mt-1 border-b border-grey cursor-pointer hover:bg-grey-lighter">
+                    <div class="p-2 mt-1 bg-white border-b rounded cursor-pointer border-grey hover:bg-grey-lighter">
                         {{ $todo->description }}
                     </div>
                 </div>
                 @if ( $todo->link )
-                    <div class="flex flex-row bg-white p-2 text-sm rounded mt-1 border-b border-grey cursor-pointer hover:bg-gray-500">
-                            <svg class="svg-icon mr-2" viewBox="0 0 20 20" class="h-8 w-8">
+                    <div class="flex flex-row p-2 mt-1 text-sm bg-white border-b rounded cursor-pointer border-grey hover:bg-gray-500">
+                            <svg class="mr-2 svg-icon" viewBox="0 0 20 20" class="w-8 h-8">
                                 <path d="M16.469,8.924l-2.414,2.413c-0.156,0.156-0.408,0.156-0.564,0c-0.156-0.155-0.156-0.408,0-0.563l2.414-2.414c1.175-1.175,1.175-3.087,0-4.262c-0.57-0.569-1.326-0.883-2.132-0.883s-1.562,0.313-2.132,0.883L9.227,6.511c-1.175,1.175-1.175,3.087,0,4.263c0.288,0.288,0.624,0.511,0.997,0.662c0.204,0.083,0.303,0.315,0.22,0.52c-0.171,0.422-0.643,0.17-0.52,0.22c-0.473-0.191-0.898-0.474-1.262-0.838c-1.487-1.485-1.487-3.904,0-5.391l2.414-2.413c0.72-0.72,1.678-1.117,2.696-1.117s1.976,0.396,2.696,1.117C17.955,5.02,17.955,7.438,16.469,8.924 M10.076,7.825c-0.205-0.083-0.437,0.016-0.52,0.22c-0.083,0.205,0.016,0.437,0.22,0.52c0.374,0.151,0.709,0.374,0.997,0.662c1.176,1.176,1.176,3.088,0,4.263l-2.414,2.413c-0.569,0.569-1.326,0.883-2.131,0.883s-1.562-0.313-2.132-0.883c-1.175-1.175-1.175-3.087,0-4.262L6.51,9.227c0.156-0.155,0.156-0.408,0-0.564c-0.156-0.156-0.408-0.156-0.564,0l-2.414,2.414c-1.487,1.485-1.487,3.904,0,5.391c0.72,0.72,1.678,1.116,2.696,1.116s1.976-0.396,2.696-1.116l2.414-2.413c1.487-1.486,1.487-3.905,0-5.392C10.974,8.298,10.55,8.017,10.076,7.825"></path>
                             </svg>
                             <a href="{{ $todo->link }}" target="blank" class="truncate">
@@ -69,7 +102,7 @@
                             </a>
                     </div>
                 @endif
-            </div>
+            </section>
         @endforeach
     </div>
     <x-jet-dialog-modal wire:model="confirmingTodoAdd" class="z-30">
