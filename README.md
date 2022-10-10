@@ -63,13 +63,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-run to get dummy data
-
-```php
-php artisan migrate:refresh --seed
-```
 And you need to config your mail smtp
-
 ```
 MAIL_MAILER=smtp
 MAIL_HOST=mailhog
@@ -81,8 +75,12 @@ MAIL_FROM_ADDRESS=null
 MAIL_FROM_NAME="${APP_NAME}"
 ```
 
-Once you´ve the Database log in with:
+run to get dummy data
+```php
+php artisan migrate:refresh --seed
+```
 
+Once you´ve the Database log in with:
 # USER: admin@admin.com
 # PASSWORD: password
 
