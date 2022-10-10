@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             PresupuestoMaximoSeeder::class,
             PresupuestoSeeder::class,
             TodoSeeder::class,
-            PhotoSeeder::class,
+            NovioSeeder::class
+            // PhotoSeeder::class,
         ]);
     }
 }

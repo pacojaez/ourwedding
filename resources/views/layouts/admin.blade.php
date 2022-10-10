@@ -12,7 +12,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/animationsvg.css') }}">
-    <link href="https://tailwindcomponents.com/css/component.nature.css" rel="stylesheet">
+    {{-- <link href="https://tailwindcomponents.com/css/component.nature.css" rel="stylesheet"> --}}
 
     @livewireStyles
     <style>
@@ -28,11 +28,11 @@
     <!-- Scripts -->
 
     <script defer src="{{ mix('js/app.js') }}"></script>
-    <script defer src="{{ mix('js/todosFilter.js') }}" defer></script>
+    <script defer src="{{ asset('js/todosFilter.js') }}" defer></script>
 
-    <script type="module">
+    {{-- <script type="module">
         import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
-    </script>
+    </script> --}}
 
     <!-- ANIME -->
     <script src="{{ asset('js/anime.min.js')}}" defer></script>

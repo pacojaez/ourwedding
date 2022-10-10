@@ -31,12 +31,17 @@ class CuentaAtras extends Component
     public $contador;
 
     /**
+     * public now to calculate if the event is past or future
+     */
+    public $now;
+
+    /**
      * defines the event dateTime using a Carbon instance
      *
      * @return void
      */
     public function mount(){
-        $this->fin = new Carbon('2022-08-13 18:00:00');
+        $this->fin = new Carbon('2022-08-13 19:00:00');
     }
 
     /**
@@ -46,7 +51,15 @@ class CuentaAtras extends Component
      */
     public function render()
     {
-        return view('livewire.cuenta-atras');
+        // $dif = $this->fin->diffInHours($this->inicio);
+        if( $this->fin->lt( Carbon::now() ))
+            $dif ='Ya llevamos CASADOS: ';
+        else
+            $dif = 'Aún falta para la boda: ';
+
+        return view('livewire.cuenta-atras', [
+            'dif' => $dif,
+        ]);
     }
 
     /**

@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\NovioController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +22,11 @@ Route::get('/linkstorage', function () {
 Route::get('/2', function () {
     return view('welcome');
 });
-Route::get('/', function () {
-    return view('welcome2');
-});
+// Route::get('/', function () {
+//     return view('welcome2');
+// });
+Route::get('/', [WelcomeController::class, 'index'])
+->name('welcome');
 
 Route::middleware(['auth'])->group(function () {
 
@@ -48,7 +52,6 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/cancions/save', [App\Http\Livewire\CancionsForm::class, 'saveCancion'])->name('saveCancion');
 
-    // Route::get('/', [HomeController::class, 'home'])->name('index');
 });
 
 
@@ -59,6 +62,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::middleware(['isAdmin'])->group(function(){
+
+    Route::get('/', [NovioController::class, 'novios'])->name('novios');
+
+    Route::post('/', [NovioController::class, 'edit'])->name('edit.novios');
 
     Route::get('/admin', function(){
         return view('admin');
@@ -85,5 +92,9 @@ Route::middleware(['isAdmin'])->group(function(){
         $exitCodeView = Artisan::call('view:clear');
         return view('cachecleared');
     })->name('clearcache');
+
+    Route::get('/changeInvitation', function(){
+        return view('changeInvitation');
+    })->name('changeInvitation');
 
 });

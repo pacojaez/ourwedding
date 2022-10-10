@@ -104,6 +104,12 @@
                                             CLEAR CACHE
                                         </a>
                                     </div>
+                                    <div class="px-3 py-2 my-2 bg-green-200 rounded-md hover:bg-green-800">
+                                        <a class="inline-block text-xs text-gray-600 no-underline rounded-md hover:text-gray-200 hover:underline"
+                                            href="{{ route('changeInvitation') }}">
+                                            CAMBIAR INVITACIÓN
+                                        </a>
+                                    </div>
                                 @endif
                             </x-slot>
                         </x-jet-dropdown>
@@ -184,6 +190,10 @@
                                                         {{ __('ONLY ADMINS') }}
                                                     </div>
 
+                                                    <x-jet-dropdown-link href="{{ route('novios') }}">
+                                                        {{ __('NOVIOS') }}
+                                                    </x-jet-dropdown-link>
+
                                                     <x-jet-dropdown-link href="{{ route('usuarios') }}">
                                                         {{ __('INVITADOS') }}
                                                     </x-jet-dropdown-link>
@@ -202,6 +212,10 @@
 
                                                     <x-jet-dropdown-link href="{{ route('clearcache') }}">
                                                         {{ __('Clear cache') }}
+                                                    </x-jet-dropdown-link>
+
+                                                    <x-jet-dropdown-link href="{{ route('changeInvitation') }}">
+                                                        {{ __('CAMBIAR INVITACIÓN') }}
                                                     </x-jet-dropdown-link>
 
                                                     <div class="border-t border-gray-100"></div>

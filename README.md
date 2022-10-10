@@ -80,6 +80,11 @@ run to get dummy data
 php artisan migrate:refresh --seed
 ```
 
+generate your APP_Key
+```php
+php artisan key:generate
+```
+
 Once you´ve the Database log in with:
 # USER: admin@admin.com
 # PASSWORD: password
