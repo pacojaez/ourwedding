@@ -43,9 +43,9 @@
 
     @livewire('cuenta-atras')
 
-    <div class="flex flex-row items-center justify-center w-full">
+    <div class="flex flex-row items-center justify-center w-full" id="parentGrande">
         <!--Container for content-->
-        <div class="container h-full mt-32 bg-green-300">
+        <div class="container h-full mt-32 bg-green-300" id="container-fotos">
             <div class="flex flex-row items-center justify-center h-screen overflow-hidden" style="background: #0f4479;">
                 <main class="absolute w-full h-full bg-white font-abhaya-libre">
                      <div class="container relative z-10 flex flex-col items-center justify-center px-6 mx-auto sm:px-12 sm:flex-row">
@@ -106,6 +106,7 @@
     @stack('scripts')
     <!-- Alpine v3 -->
     <script defer src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js"></script>
+    <script src="{{ asset('js/foto.js')}}" defer></script>
     {{-- <script src="{{ asset('js/foto.js') }}" defer></script> --}}
 </body>
 

@@ -122,7 +122,8 @@
                                 {{-- <img class="block w-auto h-8 lg:hidden" src="{{ asset('img/OLGAPACOLOGO.png')}}"
                                 alt="Olga&Paco"> --}}
                                 <img class="hidden w-auto lg:block rounded-xl"
-                                    src="{{ asset('img/OLGAPACOLOGO50x50.png') }}" alt="Workflow">
+                                    style="width: 50px; height:50px"
+                                    src="{{ asset('storage/invitation/invitation.png')}}" alt="novios">
                             </div>
                             <div class="hidden lg:flex sm:ml-6">
                                 <div class="flex space-x-4">

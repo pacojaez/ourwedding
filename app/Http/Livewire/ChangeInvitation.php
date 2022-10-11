@@ -21,7 +21,7 @@ class ChangeInvitation extends Component
         $this->photo->storeAs('/invitation', 'invitation.png');
 
         // Storage::putFileAs('/public/img', $this->photo , );
-        // return redirect('/');
+        return redirect('/');
     }
 
     public function render()

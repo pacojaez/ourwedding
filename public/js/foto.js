@@ -4,7 +4,10 @@ function ver(foto) {
     console.log('scroll TO: ' + scrollToY);
 
     let fondo = document.getElementById("fondosvg");
-    fondo.classList.add('hidden');
+    if (fondo) {
+        fondo.classList.add('hidden');
+    }
+
 
     let containerFotos = document.getElementById('container-fotos');
     containerFotos.classList.add('blur');

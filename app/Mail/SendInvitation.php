@@ -3,6 +3,7 @@
 namespace App\Mail;
 
 use App\Models\User;
+use App\Models\Novio;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -37,10 +38,15 @@ class SendInvitation extends Mailable
      */
     public function build()
     {
+        $novio = Novio::where('novio', TRUE)->firstOrFail();
+        $novia = Novio::where('novia', TRUE)->firstOrFail();
+
         return $this->view('emails.invitation')
                 ->with([
                     'user' => $this->user,
+                    'novio' => $novio,
+                    'novia' => $novia
                 ])
-                ->attach('img/olgapaco.png');
+                ->attach('storage/invitation/invitation.png');
     }
 }

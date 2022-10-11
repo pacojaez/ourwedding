@@ -58,6 +58,6 @@ class SendNewMail extends Mailable
                 'contenido' => $this->contenido,
                 'user' => $this->user
             ])
-            ->attach('img/olgapaco.png');
+            ->attach('storage/invitation/invitation.png');
     }
 }
