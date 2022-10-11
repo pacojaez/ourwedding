@@ -2,11 +2,12 @@
 
 namespace App\Mail;
 
+use App\Models\User;
+use App\Models\Novio;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use App\Models\User;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class ConfirmedAttendance extends Mailable
 {
@@ -36,10 +37,15 @@ class ConfirmedAttendance extends Mailable
      */
     public function build()
     {
+        $novio = Novio::where('novio', TRUE)->firstOrFail();
+        $novia = Novio::where('novia', TRUE)->firstOrFail();
+
         return $this->view('emails.confirmedAttendance')
             ->with([
                 'user' => $this->user,
+                'novio' => $novio,
+                'novia' => $novia
             ])
-            ->attach('img/olgapaco.png');
+            ->attach('storage/invitation/invitation.png');
     }
 }

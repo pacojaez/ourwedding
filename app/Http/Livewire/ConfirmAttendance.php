@@ -38,7 +38,7 @@ class ConfirmAttendance extends Component
         $user->confirmed = 1;
         $user->save();
 
-        Mail::to($user->email)->cc('pacojaez@gmail.com', 'omatheu@hotmail.com' )->send(new ConfirmedAttendance($user));
+        Mail::to($user->email)->cc(env('MAIL_NOVIO'), env('MAIL_NOVIA') )->send(new ConfirmedAttendance($user));
         $this->confirmingAttendance = false;
 
         $this->emit('confirmed');
