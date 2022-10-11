@@ -1,5 +1,5 @@
 <div>
-    <form wire:submit.prevent="saveChanges">
+    <form wire:submit.prevent="saveChanges" method="POST">
         @csrf
         <div class="mb-4">
             <label for="novio" class="block mb-1 font-bold text-gray-700">
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="mb-4">
-            <label for="novio" class="block mb-1 font-bold text-gray-700">
+            <label for="novia" class="block mb-1 font-bold text-gray-700">
                 NOMBRE DE LA NOVIA
             </label>
             <div class="relative flex flex-col w-full">

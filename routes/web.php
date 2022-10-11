@@ -63,9 +63,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::middleware(['isAdmin'])->group(function(){
 
-    Route::get('/', [NovioController::class, 'novios'])->name('novios');
+    Route::get('/novios', [NovioController::class, 'novios'])->name('novios');
 
-    Route::post('/', [NovioController::class, 'edit'])->name('edit.novios');
+    Route::post('/novios', [NovioController::class, 'edit'])->name('edit.novios');
 
     Route::get('/admin', function(){
         return view('admin');

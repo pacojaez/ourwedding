@@ -16,16 +16,27 @@ class Novios extends Component
         return view('livewire.novios');
     }
 
-    public function saveChanges( Request $request )
+
+    protected function rules()
     {
-        // $validatedData = $this->validate();
+        return [
+            'novio' => 'required|',
+            'novia' => 'required|'
+        ];
+    }
 
-        $novio = Novio::where('novio', 'like', TRUE);
-        $novia = Novio::where('novia', 'like', TRUE);
 
-        $novio->name = $request['novio'];
+
+    public function saveChanges()
+    {
+         $validatedData = $this->validate();
+
+        $novio = Novio::where('novio', 'like', TRUE)->firstOrFail();
+        $novia = Novio::where('novia', 'like', TRUE)->firstOrFail();
+
+        $novio->name = $validatedData['novio'];
         $novio->novio = TRUE;
-        $novia->name = $request['novia'];
+        $novia->name = $validatedData['novia'];
         $novia->novia = TRUE;
 
         $novio->save();
