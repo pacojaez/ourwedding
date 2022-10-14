@@ -51,7 +51,7 @@
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                                 <a href="{{ route('dashboard') }}"
                                     class="block px-3 py-2 my-2 text-xs text-green-200 bg-gray-600 rounded-md hover:bg-gray-900">
-                                    CONFIRMAR ASISTENCIAs
+                                    CONFIRMAR ASISTENCIA
                                 </a>
                                 <a href="{{ route('mapa') }}"
                                     class="block px-3 py-2 my-2 text-xs text-green-200 bg-gray-600 rounded-md hover:underline">
@@ -74,12 +74,25 @@
                                     EL PLAN
                                 </a>
                                 @if (auth()->user()->is_admin)
+                                <div class="px-3 py-2 my-2 bg-green-200 rounded-md hover:bg-green-800">
+                                    <a class="inline-block text-xs text-gray-600 no-underline rounded-md hover:text-gray-200 hover:underline"
+                                        href="{{ route('novios') }}">
+                                        DATOS NOVIOS
+                                    </a>
+                                </div>
+                                <div class="px-3 py-2 my-2 bg-green-200 rounded-md hover:bg-green-800">
+                                    <a class="inline-block text-xs text-gray-600 no-underline rounded-md hover:text-gray-200 hover:underline"
+                                        href="{{ route('changeInvitation') }}">
+                                        CAMBIAR INVITACIÓN
+                                    </a>
+                                </div>
                                     <div class="px-3 py-2 my-2 bg-green-200 rounded-md hover:bg-green-800">
                                         <a class="inline-block text-xs text-gray-600 no-underline rounded-md hover:text-gray-200 hover:underline"
                                             href="{{ route('usuarios') }}">
-                                            USUARIOS
+                                            INVITADOS
                                         </a>
                                     </div>
+
                                     <div class="px-3 py-2 my-2 bg-green-200 rounded-md hover:bg-green-800">
                                         <a class="inline-block text-xs text-gray-600 no-underline rounded-md hover:text-gray-200 hover:underline"
                                             href="{{ route('habitacions') }}">
@@ -102,12 +115,6 @@
                                         <a class="inline-block text-xs text-gray-600 no-underline rounded-md hover:text-gray-200 hover:underline"
                                             href="{{ route('clearcache') }}">
                                             CLEAR CACHE
-                                        </a>
-                                    </div>
-                                    <div class="px-3 py-2 my-2 bg-green-200 rounded-md hover:bg-green-800">
-                                        <a class="inline-block text-xs text-gray-600 no-underline rounded-md hover:text-gray-200 hover:underline"
-                                            href="{{ route('changeInvitation') }}">
-                                            CAMBIAR INVITACIÓN
                                         </a>
                                     </div>
                                 @endif
@@ -195,6 +202,10 @@
                                                         {{ __('NOVIOS') }}
                                                     </x-jet-dropdown-link>
 
+                                                    <x-jet-dropdown-link href="{{ route('changeInvitation') }}">
+                                                        {{ __('CAMBIAR INVITACIÓN') }}
+                                                    </x-jet-dropdown-link>
+
                                                     <x-jet-dropdown-link href="{{ route('usuarios') }}">
                                                         {{ __('INVITADOS') }}
                                                     </x-jet-dropdown-link>
@@ -214,11 +225,6 @@
                                                     <x-jet-dropdown-link href="{{ route('clearcache') }}">
                                                         {{ __('Clear cache') }}
                                                     </x-jet-dropdown-link>
-
-                                                    <x-jet-dropdown-link href="{{ route('changeInvitation') }}">
-                                                        {{ __('CAMBIAR INVITACIÓN') }}
-                                                    </x-jet-dropdown-link>
-
                                                     <div class="border-t border-gray-100"></div>
 
                                                     <!-- Authentication -->
