@@ -17,12 +17,16 @@ class NovioSeeder extends Seeder
         Novio::create([
             'name' => 'Olga',
             'novia' => TRUE,
-            'novio' => FALSE
+            'novio' => FALSE,
+            'email' => 'admin@admin.com',
+            'phone' => '666666666'
         ]);
         Novio::create([
             'name' => 'Paco',
             'novia' => FALSE,
-            'novio' => TRUE
+            'novio' => TRUE,
+            'email' => 'admin2@admin.com',
+            'phone' => '666666667'
         ]);
     }
 }

@@ -17,7 +17,6 @@ class NovioController extends Controller
 
     public function edit( Request $request){
         dd($request);
-
     }
 
 }

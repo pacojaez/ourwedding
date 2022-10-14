@@ -21,10 +21,10 @@ class NovioFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'name' => 'Olga',
-            'novia' => TRUE,
-            'novio' => FALSE
-        ];
+        // return [
+        //     'name' => 'Olga',
+        //     'novia' => TRUE,
+        //     'novio' => FALSE
+        // ];
     }
 }

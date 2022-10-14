@@ -13,5 +13,7 @@ class Novio extends Model
         'name',
         'novio',
         'novia',
+        'email',
+        'phone'
     ];
 }
