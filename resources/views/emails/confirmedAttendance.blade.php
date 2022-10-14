@@ -1331,7 +1331,7 @@
                                                                                                     <div>
                                                                                                         <p
                                                                                                             style="font-size: 14px; margin: 0px;">
-                                                                                                        {{ env('ADRESS_NOVIOS') }}
+                                                                                                        {{ $adress->direccion }}
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </td>

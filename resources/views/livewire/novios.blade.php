@@ -131,4 +131,5 @@
             Guardar Cambios
         </button>
     </form>
+    @livewire('adress')
 </div>

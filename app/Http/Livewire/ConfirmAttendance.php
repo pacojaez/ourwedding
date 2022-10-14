@@ -2,9 +2,10 @@
 
 namespace App\Http\Livewire;
 
-use App\Mail\ConfirmedAttendance;
-use Livewire\Component;
 use App\Models\User;
+use App\Models\Novio;
+use Livewire\Component;
+use App\Mail\ConfirmedAttendance;
 use Illuminate\Support\Facades\Mail;
 
 
@@ -38,7 +39,10 @@ class ConfirmAttendance extends Component
         $user->confirmed = 1;
         $user->save();
 
-        Mail::to($user->email)->cc(env('MAIL_NOVIO'), env('MAIL_NOVIA') )->send(new ConfirmedAttendance($user));
+        $novio = Novio::where('novio', 'like', TRUE)->firstOrFail();
+        $novia = Novio::where('novia', 'like', TRUE)->firstOrFail();
+
+        Mail::to($user->email)->cc($novio->email, $novia->email )->send(new ConfirmedAttendance($user));
         $this->confirmingAttendance = false;
 
         $this->emit('confirmed');

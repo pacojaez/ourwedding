@@ -40,7 +40,6 @@
 
 <body class="overflow-x-hidden bg-repeat-y">
     @include('components.navigation2')
-
     @livewire('cuenta-atras')
 
     <div class="flex flex-row items-center justify-center w-full" id="parentGrande">
