@@ -14,11 +14,12 @@ class ChangeInvitation extends Component
 
     public function save()
     {
+
         $this->validate([
-            'photo' => 'image|max:5024', // 5MB Max
+            'photo' => 'image|max:1024|mimes:png', // 1MB Max
         ]);
 
-        $this->photo->storeAs('/invitation', 'invitation.png');
+        $this->photo->storeAs('public/invitation', 'invitation.png');
 
         // Storage::putFileAs('/public/img', $this->photo , );
         return redirect('/');
