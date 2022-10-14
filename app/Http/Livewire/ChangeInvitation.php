@@ -16,13 +16,18 @@ class ChangeInvitation extends Component
     {
 
         $this->validate([
-            'photo' => 'image|max:1024|mimes:png', // 1MB Max
+            'photo' => 'image|max:5000|mimes:png', // 5MB Max
         ]);
 
-        $this->photo->storeAs('public/invitation', 'invitation.png');
+        if($this->photo->storeAs('/invitation', 'invitation.png')){
+            session()->flash('message', 'Invitación cambiada correctamente. Refresca la caché del navegador');
+        }else{
+            session()->flash('message', 'No se ha podido guaradar la foto, vuelve a intentarlo');
+        }
 
         // Storage::putFileAs('/public/img', $this->photo , );
-        return redirect('/');
+
+        return redirect()->route('changeInvitation');
     }
 
     public function render()

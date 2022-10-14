@@ -7,7 +7,15 @@
             <img src="{{ $photo->temporaryUrl() }}">
         @endif
         <input type="file" wire:model="photo">
-        <div wire:loading wire:target="photo">Uploading...</div>
+        <div wire:loading wire:target="photo">
+            Uploading...
+            <div class="absolute right-1/2 bottom-1/2  transform translate-x-1/2 translate-y-1/2 ">
+                <div
+                    class="border-t-transparent border-solid animate-spin  rounded-full border-blue-400 border-8 h-64 w-64">
+
+                </div>
+            </div>
+        </div>
         @error('photo')
             <span class="error">{{ $message }}</span>
         @enderror
