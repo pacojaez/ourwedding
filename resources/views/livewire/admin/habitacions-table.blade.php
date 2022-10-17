@@ -60,18 +60,18 @@
                                 @else
                                 <tr class="text-black bg-gray-600">
                                 @endif
-                                    <td class="p-3 font-medium capitalize">{{ $habitacion->name }}</td>
-                                    <td class="p-3">{{ $habitacion->planta }}</td>
-                                    <td class="p-3 text-center">{{ $habitacion->capacidad }}</td>
-                                    <td class="p-3 text-center uppercase">{{ $habitacion->ocupante1 }}</td>
-                                    <td class="p-3 text-center uppercase">{{ $habitacion->ocupante2 }}</td>
-                                    <td class="p-3 text-center uppercase">{{ $habitacion->ocupante3 }}</td>
-                                    <td class="p-3 text-center uppercase">{{ $habitacion->ocupante4 }}</td>
-                                    <td class="p-2">{{ $habitacion->camas }}</td>
-                                    <td class="p-2">{{ $habitacion->observaciones }}</td>
+                                    <td class="p-3 font-medium text-gray-200 capitalize">{{ $habitacion->name }}</td>
+                                    <td class="p-3 text-gray-200">{{ $habitacion->planta }}</td>
+                                    <td class="p-3 text-center text-gray-200">{{ $habitacion->capacidad }}</td>
+                                    <td class="p-3 text-center text-gray-200 uppercase">{{ $habitacion->ocupante1 }}</td>
+                                    <td class="p-3 text-center text-gray-200 uppercase">{{ $habitacion->ocupante2 }}</td>
+                                    <td class="p-3 text-center text-gray-200 uppercase">{{ $habitacion->ocupante3 }}</td>
+                                    <td class="p-3 text-center text-gray-200 uppercase">{{ $habitacion->ocupante4 }}</td>
+                                    <td class="p-2 text-gray-200">{{ $habitacion->camas }}</td>
+                                    <td class="p-2 text-gray-200">{{ $habitacion->observaciones }}</td>
                                     <td class="p-3">
                                         <x-jet-button wire:click="confirmHabitacionEdit( {{ $habitacion }})"
-                                            class="bg-orange-500 hover:bg-orange-700">
+                                            class="bg-red-400 hover:bg-red-700">
                                             MODIFICAR
                                         </x-jet-button>
                                     </td>
