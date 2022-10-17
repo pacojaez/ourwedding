@@ -17,18 +17,18 @@
     <div class="col-span-12">
         <div class="overflow-auto lg:overflow-visible">
             <div class="flex flex-col w-full pb-1 border-b-2 md:flex-row lg:justify-center border-fuchsia-900">
-                <button class="p-2 m-2 text-lg font-semibold text-green-500 bg-gray-600 rounded hover:text-xl" onclick="change(this)" data-set="all">TODAS LAS TAREAS</button>
-                <button class="p-2 m-2 text-lg font-semibold text-green-500 bg-gray-400 rounded" onclick="change(this)" data-set="done">TAREAS HECHAS</button>
+                <button class="p-2 m-2 text-lg font-semibold text-gray-200 bg-gray-600 rounded hover:text-xl hover:bg-gray-900 hover:text-gray-100" onclick="change(this)" data-set="all">TODAS LAS TAREAS</button>
+                <button class="p-2 m-2 text-lg font-semibold text-gray-200 bg-gray-600 rounded hover:text-xl hover:bg-gray-900 hover:text-gray-100" onclick="change(this)" data-set="done">TAREAS HECHAS</button>
             </div>
         </div>
     </div>
     <div class="col-span-12">
         <div class="overflow-auto lg:overflow-visible">
             <div class="flex flex-col w-full pb-1 border-b-2 md:flex-row lg:justify-center border-fuchsia-900">
-                <button class="p-2 m-2 text-lg font-bold text-red-900 bg-gray-400 rounded" onclick="change(this)" data-set="notDone">TAREAS POR HACER</button>
-                <button class="p-2 m-2 text-lg font-bold text-red-700 bg-gray-400 rounded" onclick="change(this)" data-set="Alta">PRIORIDAD ALTA</button>
-                <button class="p-2 m-2 text-lg font-bold text-red-500 bg-gray-400 rounded" onclick="change(this)" data-set="Media">PRIORIDAD MEDIA</button>
-                <button class="p-2 m-2 text-lg font-bold text-red-400 bg-gray-400 rounded" onclick="change(this)" data-set="Baja">PRIORIDAD BAJA</button>
+                <button class="p-2 m-2 text-lg font-bold text-red-700 bg-gray-400 rounded hover:bg-gray-500 hover:text-xl hover:text-gray-100" onclick="change(this)" data-set="notDone">TAREAS POR HACER</button>
+                <button class="p-2 m-2 text-lg font-bold text-gray-800 bg-red-600 rounded hover:bg-gray-500 hover:text-xl hover:text-gray-100" onclick="change(this)" data-set="Alta">PRIORIDAD ALTA</button>
+                <button class="p-2 m-2 text-lg font-bold text-gray-800 bg-red-400 rounded hover:bg-gray-500 hover:text-xl hover:text-gray-100" onclick="change(this)" data-set="Media">PRIORIDAD MEDIA</button>
+                <button class="p-2 m-2 text-lg font-bold text-gray-800 bg-red-100 rounded hover:bg-gray-500 hover:text-xl hover:text-gray-100" onclick="change(this)" data-set="Baja">PRIORIDAD BAJA</button>
             </div>
         </div>
     </div>
@@ -65,9 +65,9 @@
                             'rounded',
                             'justify-center',
                             'items-center',
-                            'bg-red-400' => $todo->priority == 'Alta',
-                            'bg-orange-300' => $todo->priority == 'Media',
-                            'bg-green-200' => $todo->priority == 'Baja',
+                            'bg-red-600' => $todo->priority == 'Alta',
+                            'bg-red-400' => $todo->priority == 'Media',
+                            'bg-red-100' => $todo->priority == 'Baja',
                         ])>
                             <p class="m-1 text-sm font-bold">
                                 {{ $todo->priority }}
