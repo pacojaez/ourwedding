@@ -501,7 +501,7 @@
                                                                                             <tr>
                                                                                                 <td class="r15-i"
                                                                                                     style="font-size: 0px; line-height: 0px;">
-                                                                                                    <img src="https://img-cache.net/im/4223820/1fc84d1657d265aa1f11371bd5cd3530117c23e350505a3fa9af60e979490c4f.jpg?e=sZbCT490Netmw0jmpROCMvyux9drNqyqdEoRrlGkjIxNW_80DT7owCbVg8pnlfjBCleXK65aMqGXuOn91H60zChgXedqG8YzvFGmfCdjaTEpoR44iKZku6YZpopDGCGBhHycZ23OtU7zZX2OMA-KOSR7t6usAcDYWLZjwQzg84faMojduUL_WpB_3tDnzyR_ehoxRb6ghedXCm-JWFNjNeKzsQTHK8RTP0AwbItnyZmnwgz_EUv2gTFh31pZkgizWLsmb5XzOmEq4J2iROE3RnP2TzhD6pFV80nI_vX3w7qWtI8EExV9shRdeEVbHvWp6JOKWVoEHiI1hFIAubit55TGE-DEUnR5dygEBdMwNAPEtUAD-K-deYyp21aENsEbSneKWE62UB3aBtM7jljXBrbd2tTYGuhNw5js2XTqDUQ8djyq3Kr5N-yAQOOqy6REFyhe8_JBMdtW2t6E_H5NMLC1qGWILbjy_DAUEwkXzMc"
+                                                                                                    <img src="{{ asset('img/wedding/8.jpg')}}"
                                                                                                         width="200"
                                                                                                         border="0"
                                                                                                         class=""
@@ -668,7 +668,7 @@
                                                                                         style="color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; line-height: 1.5;">
                                                                                         <!--[if mso]> <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://eccdica.r.bh.d.sendibt3.com/tr/cl/j1on1jgMtMJeNHb_CR3bN_7wbusxXZV0PJofHli46mr9-fCu4wnMi_Gl50w_Pl-CtCY_J98DVGC7ZPURf5Hw2x2Afm0ujougM7l4H8gvX6I5K8PlFAJTWfTTJ4rcFrnSsktjeO-wyGsqLQPthr9Ac--PyPYHaoRfd2Gz4dyuM0nyoeSApU6bYtJQa-P3FmSGCUwUbS0r_NQ9Hu6p-8Ah38_GpniGxjNpiPv9IKdQfhifmBBBSQ" style="v-text-anchor:middle; height: 41px; width: 289px;" arcsize="10%" fillcolor="#0092FF" strokecolor="#0092FF" strokeweight="1px" data-btn="1"> <w:anchorlock/> <div style="display:none;"> <center class="default-button"><p>APP DE LA BODA</p></center> </div> </v:roundrect> <![endif]-->
                                                                                         <!--[if !mso]><!-- -->
-                                                                                        <a href="https://eccdica.r.bh.d.sendibt3.com/tr/cl/G0PMsG-O_50o5htFPQsN5uJ6CZvgHTzpnJiiG7md7CRMZpcQXVkYWnJqEjO9L7r1uxxviVMHDawwU2ZksVtFqdn08fJ6xT02gcaDiGUA_EHo4vX3_281_6XAC5sQwNl7OGlwi2wxxFTqnPjwasxhAfh0l2NnIs25LHQRU7pF4ts-Y6usfMfGnh-5trUzMAX_OnFOOSfbSTbh9zOJzdzW79nBmUxFR30f_sOjx8jePQpyZZ_Ymg"
+                                                                                        <a href="{{ env('APP_URL')}}"
                                                                                             class="r26-r default-button"
                                                                                             target="_blank"
                                                                                             data-btn="1"
@@ -702,7 +702,7 @@
                                                                                                     <div>
                                                                                                         <h1 class="default-heading1"
                                                                                                             style="color: #1F2D3D; font-family: arial,helvetica,sans-serif; font-size: 14px; margin: 0px;">
-                                                                                                            y tu contraseña 12345678
+                                                                                                            y tu contraseña: password
                                                                                                         </h1>
                                                                                                     </div>
                                                                                                 </td>
@@ -871,10 +871,11 @@
                                                                     <tr>
                                                                         <td class=""
                                                                             style="font-size: 0px; line-height: 0px;">
-                                                                            <img src="https://img-cache.net/im/4223820/00759fab75a9ab68170dac38ee9b0ddb3c2ea222f99042ba19107a0e4a083dac.jpg?e=_FDs_nVexy_iBTcKe5dY1UFjUakB7f9xDzXNqFNeLwlluQvoAaYCfdhqXt-qzraQHPDDKZlvy3dQabJpu_cmSAqWWvMcfZukyogTk5BbcoZN7rLMVWdeOOj3ptvTvwHNtw5dpHREvs3se5Toct3osnrHQvLkYIqnk96lxr68p333EnOSOYNPo9FWbG4MlmvDQPLAxPhfs8-37s2eB0wzfnL4lIiUDyuNvU05agaGQi-3S6UCHQgLXOjg-ZIi2wEgH439gvacqNuJNNwO1bOYnT0Pzw9BpRkMQItRd0aOcIjldjcojMdmwVeMx02_n2By41QvbPnTkTQatZRyAaonjoxzQbAmvz9l2l6fs5dTwqjqeWKM9VA3fBtoYEVySaBGW3I_CJMuhFpepBJYBtU2i4fLSeFYOxw9IMS2CfWBr0NnmAI6k8ALLjg_nE2rS49T0Iu2Yr9Q5cnGM0blypFlehCe5KqqLIqjwdE3JNmDTD2k1fGj"
-                                                                                width="270" border="0"
-                                                                                class=""
-                                                                                style="display: block; width: 100%;">
+                                                                            <img src="{{ asset('img/wedding/5.jpg')}}"
+                                                                                                        width="270"
+                                                                                                        border="0"
+                                                                                                        class=""
+                                                                                                        style="display: block; width: 100%;">
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -909,10 +910,11 @@
                                                                     <tr>
                                                                         <td class="r22-i"
                                                                             style="font-size: 0px; line-height: 0px;">
-                                                                            <img src="https://img-cache.net/im/4223820/0aa827eab105387a32993e5b63d8fd365168b915260a9df5e5aea9239b7b703c.jpg?e=9U_oL8Un8SHV61h0dm3eJnDLqTXq7bqEb6bce5WAsulfBvJQ9gw20aKcwwrCJVA-84VwjFi6hAymzlHEZjYamgEtNErZXNteAOxe_sULJygeWn6fNWIYLZ4x28JfpN1szgYH65SdDKw9v7C3u22w3_pthoBVmTgMrsWDhOwv40fyX7HS8Cq-RuEc9TF1FdflsfZ9sjoxq_HEm2IT6mTrUZztXB05ZjyV7xyL91OwfAX_rkSD5onW-fNwLnZYEYreEeuLlPQSmEzGhm0b-Eh8O74N4oBlAWZEW48PxgFU6FMjDnPq8tDuhNzLC_Q6vBwJpe8XdB7kd03REJXbtb5FTZBboODujFOFt9tYVu308d7Me4aNj0hWZqtPL8htFk1Bd__2FZv6AuWDTjUELHI__abR-O4yOkyC3ZSCk_Dw6rReA7ctgfoHfWy1UK26AMpTi5NalQW_2pLBLJbjG_vrp2R6rrG0jcJUYYYmjsGaMv2zpd5JWQ"
-                                                                                width="270" border="0"
-                                                                                class=""
-                                                                                style="display: block; width: 100%;">
+                                                                            <img src="{{ asset('img/wedding/3.jpg')}}"
+                                                                                                        width="270"
+                                                                                                        border="0"
+                                                                                                        class=""
+                                                                                                        style="display: block; width: 100%;">
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -1120,11 +1122,11 @@
                                                                                         <tr>
                                                                                             <td class="r15-i"
                                                                                                 style="font-size: 0px; line-height: 0px;">
-                                                                                                <img src="https://img-cache.net/im/4223820/b371ebd5bfad4a3f6c405d1a39c64cb0a825d91c84f204f510d0cd951ed7fdb1.jpg?e=YiiqW0mmnIn5X27ovlLh2_46_vLVf-J-hNF3nSXRBlXxnuyRUnblgXTsfdqTUPahPAmX9pTl2ga42Y5LYh9zzLdruMOET50P1_r35tT1bVZTzpZv_qSXXwImeTmxPeWv86SQ156Zv5iVCvxz9AK2LhiY1CqfDCS1Pjp0ryRAoM7dWNwrv5sf0oI28K0ZNFgJuaw1c3UlDz_3EX12-glWKi2SmPvelRKNv_RyWnK0v--x5X03dPLG7gfNbVxzU9T-pD1ppObMdSUm-B6TNSVI6AURKhvHAzDnM-tg5869FE71mrIjOf1nag"
-                                                                                                    width="70"
-                                                                                                    border="0"
-                                                                                                    class=""
-                                                                                                    style="display: block; width: 100%;">
+                                                                                                <img src="{{ asset('img/wedding/9.jpg')}}"
+                                                                                                width="70"
+                                                                                                border="0"
+                                                                                                class=""
+                                                                                                style="display: block; width: 100%;">
                                                                                             </td>
                                                                                         </tr>
                                                                                         <tr
@@ -1216,7 +1218,7 @@
                                                                                                 <div>
                                                                                                     <p
                                                                                                         style="margin: 0px;">
-                                                                                                        OLGA&amp;PACO
+                                                                                                        {{ $novia->name }}&amp;{{ $novio->name }}
                                                                                                     </p>
                                                                                                 </div>
                                                                                             </td>
@@ -1240,10 +1242,8 @@
                                                                                                 <div>
                                                                                                     <p
                                                                                                         style="font-size: 14px; margin: 0px;">
-                                                                                                        c/ Tarragona
-                                                                                                        61-63 ,
-                                                                                                        08226,
-                                                                                                        Terrassa</p>
+                                                                                                        {{ $adress->direccion }}
+                                                                                                    </p>
                                                                                                 </div>
                                                                                             </td>
                                                                                         </tr>
@@ -1272,8 +1272,9 @@
                                                                                                 <div>
                                                                                                     <p
                                                                                                         style="font-size: 14px; margin: 0px;">
-                                                                                                        ¿Dudas? Te dejo mi mail:
-                                                                                                        pacojaez@gmail.com
+                                                                                                        ¿Dudas? Nuestros mails:
+                                                                                                        {{ $novia->email }}&amp;{{ $novio->email }}
+
                                                                                                     </p>
                                                                                                 </div>
                                                                                             </td>
@@ -1359,11 +1360,11 @@
                                                                                                                     <td height="48"
                                                                                                                         class=""
                                                                                                                         style="font-size: 0px; line-height: 0px;">
-                                                                                                                        <img src="https://img-cache.net/im/4223820/ee68726b28b2fc319d9f6432b3e201dd7fc807c3550d6c2e66ef250c9bf4c353.png?e=l3BgW4SQ0bRoG3OGphEONFscAKI6wy553kD0bF6rB0LD4vE-ULN2lUQWHlwpEJuIN2TwbZNkwcB3XYkADC8aw2LIQVJvKwgXndjR5nqkhg-RlhNCQwqjwtK-f-2p2_XHv-QLhSVbFcW-buBMcJ6SfOQRTs9_BnGbvIlpLOe9Wve4o1OyuG7EZMmG-1RCq4KcXgBw5Tm2mrWCvlCeDJV4NjYDHcDXD2PeGNfWrdrBKAWpxTMb0au-zVmt37lAHEBi"
-                                                                                                                            width="129"
-                                                                                                                            border="0"
-                                                                                                                            class=""
-                                                                                                                            style="display: block; width: 100%;">
+                                                                                                                        <img src="{{ asset('img/wedding/4.jpg')}}"
+                                                                                                                        width="129"
+                                                                                                                        border="0"
+                                                                                                                        class=""
+                                                                                                                        style="display: block; width: 100%;">
                                                                                                                     </td>
                                                                                                                 </tr>
                                                                                                             </table>
@@ -1405,9 +1406,10 @@
             </table>
         </td>
     </tr>
-    </table><img width="1" height="1"
-        src="https://eccdica.r.bh.d.sendibt3.com/tr/op/FE4dkAoubg1HJ9JqR5TvFqCJKWZ3KsH3sj3AavZ4wTlBe_4IFpIimcE_ULgf1YnkRT4HVpVgV34wuG6jYjowSG1R5c73b2o0qvL2HSF92ogoaBNHoLSeziKWtU0BmvnZ5bHvaYxM7r2gfzgb4sZhMoxOmKpisPeAUrAZEVn5kACy"
-        alt="" />
+</table>
+<img width="1" height="1"
+src="{{ asset('img/wedding/6.jpg')}}"
+alt="" />
 </body>
 
 </html>

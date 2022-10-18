@@ -58,6 +58,8 @@ class SendNewMail extends Mailable
         $novia = Novio::where('novia', TRUE)->firstOrFail();
         $adress = Adress::first();
 
+        set_time_limit(0);
+
         return $this->view('emails.newMail')
             ->subject( $this->subject)
             ->with([
