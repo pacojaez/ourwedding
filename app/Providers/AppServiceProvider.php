@@ -26,8 +26,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::share('adress', Adress::first());
-        View::share('novio', Novio::where('novio', 'like', TRUE)->firstOrFail());
-        View::share('novia', Novio::where('novia', 'like', TRUE)->firstOrFail());
+        // View::share('adress', Adress::first());
+        // View::share('novio', Novio::where('novio', 'like', TRUE)->firstOrFail());
+        // View::share('novia', Novio::where('novia', 'like', TRUE)->firstOrFail());
     }
 }
